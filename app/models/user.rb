@@ -8,4 +8,6 @@ class User < ApplicationRecord
   has_many :chats, dependent: :destroy
   has_many :chats, through: :messages
 
+  validates :username, presence: true, uniqueness: true
+  validates :online, default: false
 end
