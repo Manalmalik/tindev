@@ -1,0 +1,56 @@
+<svg width="517" height="398" viewBox="0 0 517 398" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="388.158" cy="306.158" r="2.15789" fill="#E2A140"/>
+<circle cx="414.053" cy="306.158" r="2.15789" fill="#E2A140"/>
+<circle cx="439.947" cy="306.158" r="2.15789" fill="#E2A140"/>
+<circle cx="465.842" cy="306.158" r="2.15789" fill="#E2A140"/>
+<circle cx="388.158" cy="332.052" r="2.15789" fill="#E2A140"/>
+<circle cx="414.053" cy="332.052" r="2.15789" fill="#E2A140"/>
+<circle cx="439.947" cy="332.052" r="2.15789" fill="#E2A140"/>
+<circle cx="465.842" cy="332.052" r="2.15789" fill="#E2A140"/>
+<circle cx="388.158" cy="357.947" r="2.15789" fill="#E2A140"/>
+<circle cx="414.053" cy="357.947" r="2.15789" fill="#E2A140"/>
+<circle cx="439.947" cy="357.947" r="2.15789" fill="#E2A140"/>
+<circle cx="465.842" cy="357.947" r="2.15789" fill="#E2A140"/>
+<circle cx="388.158" cy="383.842" r="2.15789" fill="#E2A140"/>
+<circle cx="414.053" cy="383.842" r="2.15789" fill="#E2A140"/>
+<circle cx="439.947" cy="383.842" r="2.15789" fill="#E2A140"/>
+<circle cx="465.842" cy="383.842" r="2.15789" fill="#E2A140"/>
+<circle cx="2.16131" cy="128.158" r="2.15789" fill="#E24040"/>
+<circle cx="28.0561" cy="128.158" r="2.15789" fill="#E24040"/>
+<circle cx="53.9509" cy="128.158" r="2.15789" fill="#E24040"/>
+<circle cx="79.8456" cy="128.158" r="2.15789" fill="#E24040"/>
+<circle cx="2.16131" cy="154.053" r="2.15789" fill="#E24040"/>
+<circle cx="28.0561" cy="154.053" r="2.15789" fill="#E24040"/>
+<circle cx="53.9509" cy="154.053" r="2.15789" fill="#E24040"/>
+<circle cx="79.8456" cy="154.053" r="2.15789" fill="#E24040"/>
+<circle cx="2.16131" cy="179.947" r="2.15789" fill="#E24040"/>
+<circle cx="28.0561" cy="179.947" r="2.15789" fill="#E24040"/>
+<circle cx="53.9509" cy="179.947" r="2.15789" fill="#E24040"/>
+<circle cx="79.8456" cy="179.947" r="2.15789" fill="#E24040"/>
+<circle cx="2.16131" cy="205.842" r="2.15789" fill="#E24040"/>
+<circle cx="28.0561" cy="205.842" r="2.15789" fill="#E24040"/>
+<circle cx="53.9509" cy="205.842" r="2.15789" fill="#E24040"/>
+<circle cx="79.8456" cy="205.842" r="2.15789" fill="#E24040"/>
+<path opacity="0.1" d="M422.808 299.621C307.265 415.513 299.306 365.924 228.318 281.911C164.917 206.877 166.681 171.353 217.575 114.829C241.563 88.1881 237.137 81.0894 288.212 65.6765C348.573 47.4612 374.952 71.2133 412.343 104.88C514.959 197.276 473.702 243.098 422.808 299.621Z" stroke="url(#paint0_linear)" stroke-width="1.5"/>
+<path opacity="0.3" d="M343.304 324.315C196.462 406.009 202.661 354.842 156.426 251.914C115.132 159.987 126.94 125.44 193.172 84.0536C224.389 64.5473 222.033 56.2944 276.795 55.5147C341.512 54.593 360.81 85.4747 388.162 129.247C463.228 249.378 409.536 282.928 343.304 324.315Z" stroke="url(#paint1_linear)" stroke-width="2"/>
+<path opacity="0.5" d="M256.981 324.883C89.0374 363.938 109.634 315.257 93.1689 200.753C78.4634 98.4864 99.8866 67.7702 176.921 45.6809C213.23 35.2696 213.243 26.4703 267.471 41.1651C331.559 58.5312 341.849 94.4183 356.435 145.285C396.465 284.886 334.016 302.793 256.981 324.883Z" stroke="url(#paint2_linear)" stroke-width="2.5"/>
+<path opacity="0.7" d="M170.877 299.768C-5.70858 290.804 28.3539 248.674 44.4887 131.249C58.8991 26.3736 88.6985 2.17148 170.877 2.17148C209.61 2.17148 212.11 -6.49125 261.411 23.2966C319.675 58.4998 319.676 96.7513 319.676 150.97C319.676 299.768 253.056 299.768 170.877 299.768Z" stroke="url(#paint3_linear)" stroke-width="2"/>
+<defs>
+<linearGradient id="paint0_linear" x1="405.061" y1="108.131" x2="240.233" y2="291.191" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E24040"/>
+<stop offset="1" stop-color="#E2A140"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="380.056" y1="130.397" x2="165.552" y2="264.434" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E24040"/>
+<stop offset="1" stop-color="#E2A140"/>
+</linearGradient>
+<linearGradient id="paint2_linear" x1="348.115" y1="144.13" x2="98.6259" y2="215.67" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E24040"/>
+<stop offset="1" stop-color="#E2A140"/>
+</linearGradient>
+<linearGradient id="paint3_linear" x1="311.801" y1="147.482" x2="45.6516" y2="147.482" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E24040"/>
+<stop offset="1" stop-color="#E2A140"/>
+</linearGradient>
+</defs>
+</svg>
