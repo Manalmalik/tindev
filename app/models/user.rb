@@ -5,9 +5,13 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :messages, dependent: :destroy
   has_many :tickets, dependent: :destroy
-  has_many :chats, dependent: :destroy
-  has_many :chats, through: :messages
+  has_many :chats_as_sender, :class_name => 'Chat', :foreign_key => 'sender_id', dependent: :destroy
+  has_many :chats_as_receiver, :class_name => 'Chat', :foreign_key => 'receiver_id', dependent: :destroy
 
   validates :username, presence: true, uniqueness: true
   validates :online, default: false
+
+  def chats
+    chats_as_sender + chats_as_receiver
+  end
 end
