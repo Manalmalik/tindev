@@ -1,6 +1,7 @@
 
 .button-main {
-  background: linear-gradient(90deg, rgba(226,64,64,1) 0%, rgba(226,161,64,1) 100%);
+  background: linear-gradient(90deg, rgba(249,56,56,1) 0%, rgba(255,172,49,1) 25%, rgba(255,219,32,1) 50%, rgba(255,172,49,1) 75%, rgba(249,56,56,1) 100%);
+  background-size: 400%;
   border-radius: 60px;
   display:inline-block;
   cursor:pointer;
@@ -10,15 +11,26 @@
   font-weight: 400;
   padding: 12px 24px;
   text-decoration: none;
-  &hover {
+  &:hover {
     text-decoration: none !important;
-    color: #fff;
+    color: white;
+    animation: animate 4s linear infinite !important;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
   }
 }
 
 
 .button-main-small {
-  background: linear-gradient(90deg, rgba(226,64,64,1) 0%, rgba(226,161,64,1) 100%);
+  background: linear-gradient(90deg, rgba(249,56,56,1) 0%, rgba(255,172,49,1) 25%, rgba(255,219,32,1) 50%, rgba(255,172,49,1) 75%, rgba(249,56,56,1) 100%);
+  background-size: 400%;
   border-radius: 60px;
   display:inline-block;
   cursor:pointer;
@@ -28,14 +40,17 @@
   font-weight: 400;
   padding: 8px 16px;
   text-decoration: none;
-  &hover {
+  &:hover {
     text-decoration: none !important;
     color: #fff;
+    animation: animate 4s linear infinite !important;
   }
 }
 
 
 .button-secondary-small {
+  background: #181818;
+  transition: 1s;
   border: 1px solid #2e2e2e;
   border-radius: 60px;
   display:inline-block;
@@ -47,8 +62,17 @@
   padding: 8px 16px;
   margin: 0 10px;
   text-decoration: none;
-  &hover {
+  &:hover {
+    background: rgba(249,56,56,1);
     text-decoration: none !important;
+    border: 1px solid rgba(249,56,56,1);
     color: #fff;
   }
 }
+
+
+
+
+
+
+
