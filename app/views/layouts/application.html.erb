@@ -16,5 +16,56 @@
     <%= render 'shared/flashes' %>
 
     <%= yield %>
+
+    <div id="footer">
+      <div id="footer-container">
+        <div class="footer-column">
+          <%= image_tag "/assets/Screens/Tindev.svg", class: "footer-logo" %>
+          <ul>
+            <li>Copyright 2020 Tindev GmbH.</li>
+            <li>All rights reserved.</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h6>Company</h6>
+          <ul>
+            <li><%= link_to "Video Chat", "/", class: "footer-link" %></li>
+            <li><%= link_to "Channel", "/", class: "footer-link" %></li>
+            <li><%= link_to "Blog", "/", class: "footer-link" %></li>
+            <li><%= link_to "Jobs", "/", class: "footer-link" %></li>
+            <li><%= link_to "What's New", "/", class: "footer-link" %></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h6>Legal</h6>
+          <ul>
+            <li><%= link_to "Legal Notice", "/", class: "footer-link" %></li>
+            <li><%= link_to "Privacy Policy", "/", class: "footer-link" %></li>
+            <li><%= link_to "Terms of Use", "/", class: "footer-link" %></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h6>Follow Us</h6>
+          <ul class="inline-icons">
+            <li>
+              <%= link_to "#", class: "footer-icon" do %>
+                <%= image_tag "/assets/Screens/github.svg" %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#", class: "footer-icon" do %>
+                <%= image_tag "/assets/Screens/twitter.svg" %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#", class: "footer-icon" do %>
+                <%= image_tag "/assets/Screens/instagram.svg" %>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>

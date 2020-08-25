@@ -1,1 +1,190 @@
 // Specific CSS for your home-page
+$bg-color-light: #181818;
+$bg-color-dark: #131313;
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: $bg-color-light;
+}
+
+// Hero Section
+
+.hero-area {
+  height: 80vh;
+  background-color: $bg-color-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero-wrapper {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  .hero-content {
+  width: 50%;
+  padding-right: 30px;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  h4 {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    line-height: 2rem;
+  }
+  p {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+}
+
+.hero-images {
+  background-image: url("Screens/hero-shape.svg");
+  width: 50%;
+  height: 360px;
+  background-position: center;
+  background-size: contain, cover;
+  background-repeat: no-repeat;
+  position: relative;
+  .hero-image-back {
+    position: absolute;
+    top: -3%;
+    left: 4%;
+    width: 300px;
+  }
+  .hero-image-front {
+    position: absolute;
+    right: 13%;
+    top: 10%;
+    height: 290px;
+  }
+}
+
+// How it works section
+
+#how-it-works-area {
+  padding: 160px 0;
+  background-color: $bg-color-dark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#how-it-works-wrapper {
+  max-width: 1000px;
+  h2 {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .hiw-card-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .hiw-card {
+    border: 1px solid #414141;
+    border-radius: 12px;
+    width: 30%;
+    padding: 20px;
+    h3 {
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 12px;
+      font-family: 'Poppins', sans-serif;
+      text-transform: uppercase;;
+    }
+    h4 {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+  }
+}
+
+.subheadline-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  .subheadline-line {
+    height: 2px;
+    width: 65px;
+    border-radius: 8px;
+    background-color: #e24040;
+    margin-bottom: 40px;
+  }
+}
+
+// Signup Section
+
+.signup-area {
+  height: 80vh;
+  background-color: $bg-color-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#signup-wrapper {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  .signup-content {
+  width: 50%;
+  padding-left: 30px;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  h4 {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    line-height: 2rem;
+  }
+  p {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+}
+
+.signup-images {
+  background-image: url("Screens/signup-shape.svg");
+  width: 50%;
+  height: 360px;
+  background-position: center;
+  background-size: contain, cover;
+  background-repeat: no-repeat;
+  position: relative;
+  .signup-image-back {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 220px;
+  }
+  .signup-image-front {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 220px;
+  }
+}

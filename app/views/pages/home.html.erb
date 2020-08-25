@@ -1,2 +1,55 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="hero-area">
+  <div id="hero-wrapper">
+    <div class="hero-content">
+      <h1>Get video support from developers</h1>
+      <h4>Match  with a developer from the community based on a selected topic</h4>
+      <div class="button-wrapper">
+        <%= link_to "Get Help", "/", class: "button-main" %>
+      </div>
+    </div>
+    <div class="hero-images">
+      <img src="/assets/Screens/hero-image-back.svg" class="hero-image-back" alt="">
+      <img src="/assets/Screens/hero-image-front.svg" class="hero-image-front" alt="">
+    </div>
+  </div>
+</div>
+
+<div id="how-it-works-area">
+  <div id="how-it-works-wrapper">
+    <div class="subheadline-wrapper">
+      <h2>How it works</h2>
+      <div class="subheadline-line"></div>
+    </div>
+    <div class="hiw-card-wrapper">
+      <div class="hiw-card">
+        <h3>Get Help</h3>
+        <h4>Describe and post your problem on  our issue page</h4>
+      </div>
+      <div class="hiw-card">
+        <h3>Support Devs</h3>
+        <h4>Browse the threads and contact the devs who you can support</h4>
+      </div>
+      <div class="hiw-card">
+        <h3>Coming Soon</h3>
+        <h4>Sign Up for webinars based on the most popular topics posted on the service </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="signup-area">
+  <div id="signup-wrapper">
+    <div class="signup-images">
+      <img src="/assets/Screens/signup-image-back.svg" class="signup-image-back" alt="">
+      <img src="/assets/Screens/signup-image-front.svg" class="signup-image-front" alt="">
+    </div>
+    <div class="signup-content">
+      <h1>Not part of the community yet?</h1>
+      <h4>Sign Up to become a part of our awesome community, and give or seek help from other developpers all over the world</h4>
+      <div class="button-wrapper">
+        <%= link_to "Sign Up", "/", class: "button-main" %>
+      </div>
+    </div>
+  </div>
+</div>
