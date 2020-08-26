@@ -1,0 +1,37 @@
+$bg-color-light: #181818;
+$bg-color-dark: #131313;
+
+
+.signup  {
+  background-color: $bg-color-dark;
+  color: white;
+  width: 30vw;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 15px;
+  border: solid 1px rgb(150,150,150);
+  box-shadow: 0px 5px 5px 10px $bg-color-dark;
+}
+
+.subheadline-wrapper.form{
+  text-align: center;
+  margin: 0 auto;
+}
+
+.form-control {
+  background-color: $bg-color-dark !important;
+  color: white !important;
+
+}
+
+.subheadline-line.form{
+  margin-bottom: 1rem !important;
+  height: 4px;
+}
+
+.btn {
+  font-size: 1rem;
+  color: white;
+  padding: 0px 12px;
+}
+
