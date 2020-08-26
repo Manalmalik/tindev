@@ -12,7 +12,7 @@ class PagesController < ApplicationController
   end
 
   def authentication
-
+    @user = current_user
     # Substitute your Twilio AccountSid and ApiKey details
     account_sid = 'AC638feb082b61d31367ebbb7eff9aa107'
     api_key_sid = 'SKebe62a6f39022a88251f4bfededae19a'
@@ -21,7 +21,7 @@ class PagesController < ApplicationController
     # Create an Access Token
     token = Twilio::JWT::AccessToken.new account_sid, api_key_sid, api_key_secret,
         ttl: 3600,
-        identity: 'example-user'
+        identity: @user.id
 
     # Grant access to Video
     grant = Twilio::JWT::AccessToken::VideoGrant.new
