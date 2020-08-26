@@ -19,4 +19,10 @@ class TicketsController < ApplicationController
       render :new
     end
   end
+
+  private
+
+  def ticket_params
+    params.require(:ticket).permit(:title, :description)
+  end
 end
