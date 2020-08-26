@@ -1,1 +1,22 @@
 <h1> create a new ticket </h1>
+
+<div class="ticket form">
+    <h2 class="subheadline-wrapper form">Ask your question
+      <div class="subheadline-line form"></div></h2>
+       <%= simple_form_for [@category, @ticket] do |f| %>
+
+ <div class="form-inputs">
+       <%= f.input :title,
+       required: true,
+       autofocus: true %>
+       <%= f.input :description,
+       as: :text,
+       required: true,
+       autofocus: true%>
+     </div>
+
+     <div class="form-actions button-main-small">
+      <%= f.button :submit, "Submit" %>
+    </div>
+    <% end %>
+  </div>

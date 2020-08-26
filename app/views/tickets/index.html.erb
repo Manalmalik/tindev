@@ -1,1 +1,8 @@
-<h1> All Tickets </h1>
+<h1>Tickets for </h1>
+
+<%= link_to 'Create a ticket', new_category_ticket_path(params[:category_id])  %>
+
+<% @tickets.each do |ticket| %>
+  <%= ticket.title %>
+  <%= ticket.description %>
+<% end %>

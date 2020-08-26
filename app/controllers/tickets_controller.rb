@@ -18,7 +18,8 @@ class TicketsController < ApplicationController
     authorize @ticket
     authorize @category
     if @ticket.save
-      redirect_to ticket_path(@ticket), notice: 'Ticket was successfully created.'
+      redirect_to category_tickets_path(@category.id), notice: 'Ticket was successfully created.'
+      # redirect_to category_ticket(@category.id, @ticket.id), notice: 'Ticket was successfully created.'
     else
       render :new
     end
@@ -27,6 +28,6 @@ class TicketsController < ApplicationController
   private
 
   def ticket_params
-    params.require(:review).permit(:title, :description)
+    params.require(:ticket).permit(:title, :description)
   end
 end

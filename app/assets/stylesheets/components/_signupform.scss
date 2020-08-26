@@ -66,6 +66,17 @@ $bg-color-dark: #131313;
   }
 }
 
+.ticket  {
+  background-color: $bg-color-dark;
+  color: white;
+  width: 75vw;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 15px;
+  border: solid 1px rgb(150,150,150);
+  box-shadow: 0px 5px 5px 5px $bg-color-dark;
+}
+
 
 
 
