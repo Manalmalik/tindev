@@ -1,0 +1,17 @@
+$bg-color-light: #181818;
+$bg-color-dark: #131313;
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: $bg-color-light;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+h1 {
+  color: white;
+}
