@@ -1,7 +1,7 @@
 class ChatsController < ApplicationController
   def index
     @chats = Chat.all
-    authorize @chat
+    @chats = policy_scope(Chat)
   end
 
   def show
