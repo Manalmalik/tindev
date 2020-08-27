@@ -4,4 +4,5 @@
   <%= @ticket.title %>
   <%= @ticket.description %>
   <%= @category.name %>
+  <%= link_to "Contact User", user_chats_path(current_user.id, ticket_owner: @ticket.user), method: :post %>
 </div>
