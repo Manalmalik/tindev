@@ -10,6 +10,6 @@ class ChatPolicy < ApplicationPolicy
   end
 
   def create?
-    record.user == user
+    user
   end
 end

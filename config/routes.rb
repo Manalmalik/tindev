@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :messages, only: [:create]
   end
   resources :users, only: [] do
-    resources :chats, only: [:create]
+    resources :chats, only: [:create] do
+    end
   end
 end

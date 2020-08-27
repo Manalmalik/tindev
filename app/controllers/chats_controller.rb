@@ -1,6 +1,7 @@
 class ChatsController < ApplicationController
   def index
     @chats = Chat.all
+    @messages = Message.all.where(id: current_user.id)
     @chats = policy_scope(Chat)
   end
 
@@ -12,7 +13,7 @@ class ChatsController < ApplicationController
 
   def create
     @chat = Chat.new
-    @receiver = User.find(params[:id])
+    @receiver = User.find(params[:ticket_owner])
     @sender = current_user
     @chat.receiver = @receiver
     @chat.sender = @sender
