@@ -34,6 +34,25 @@ class TicketsController < ApplicationController
     authorize @category
   end
 
+  def edit
+    @category = Category.find(params[:category_id])
+    @ticket = Ticket.find(params[:id])
+    authorize @category
+    authorize @ticket
+  end
+
+  def update
+    @category = Category.find(params[:category_id])
+    @ticket = Ticket.find(params[:id])
+    authorize @ticket
+    authorize @category
+    if @ticket.update(ticket_params)
+      redirect_to category_ticket_path(@category, @ticket), notice: 'Ticket was successfully updated.'
+    else
+      render :edit
+    end
+  end
+
   def destroy
     @category = Category.find(params[:category_id])
     @ticket = Ticket.find(params[:id])

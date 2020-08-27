@@ -8,5 +8,10 @@
 </div>
 
 <div class="button-main">
+  <%= link_to "Update Ticket", edit_category_ticket_path(@category, @ticket) %>
+</div>
+
+<div class="button-main">
   <%= link_to "Close Ticket", category_ticket_path(@category, @ticket), method: :delete %>
 </div>
+
