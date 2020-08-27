@@ -34,6 +34,15 @@ class TicketsController < ApplicationController
     authorize @category
   end
 
+  def destroy
+    @category = Category.find(params[:category_id])
+    @ticket = Ticket.find(params[:id])
+    authorize @ticket
+    authorize @category
+    @ticket.destroy
+    redirect_to category_tickets_path
+  end
+
   private
 
   def ticket_params
