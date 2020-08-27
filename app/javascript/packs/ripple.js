@@ -1,4 +1,4 @@
-const buttons document.querySelector('.button-main');
+const buttons = document.querySelector('.button-main');
 buttons.addEventListener('click', function(e) {
   let x = e.clientX - e.target.offsetLeft;
   let y = e.clientY - e.target.offsetLeft;

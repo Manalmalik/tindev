@@ -9,6 +9,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+
   </head>
 
   <body>
@@ -20,7 +21,7 @@
     <div id="footer">
       <div id="footer-container">
         <div class="footer-column">
-          <%= image_tag "/assets/Screens/Tindev.svg", class: "footer-logo" %>
+          <%= image_tag image_url('/assets/Screens/Tindev.svg'), class: "footer-logo"%>
           <ul>
             <li>Copyright 2020 Tindev GmbH.</li>
             <li>All rights reserved.</li>
@@ -49,23 +50,25 @@
           <ul class="inline-icons">
             <li>
               <%= link_to "#", class: "footer-icon" do %>
-                <%= image_tag "/assets/Screens/github.svg" %>
+                <%= image_tag image_url("/assets/Screens/github.svg") %>
               <% end %>
             </li>
             <li>
               <%= link_to "#", class: "footer-icon" do %>
-                <%= image_tag "/assets/Screens/twitter.svg" %>
+                <%= image_tag image_url("/assets/Screens/twitter.svg") %>
               <% end %>
             </li>
             <li>
               <%= link_to "#", class: "footer-icon" do %>
-                <%= image_tag "/assets/Screens/instagram.svg" %>
+                <%= image_tag image_url("/assets/Screens/instagram.svg") %>
               <% end %>
             </li>
           </ul>
         </div>
       </div>
     </div>
+
+    <script src="//media.twiliocdn.com/sdk/js/video/releases/2.7.2/twilio-video.min.js"></script>
 
   </body>
 </html>

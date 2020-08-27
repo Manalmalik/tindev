@@ -1,0 +1,14 @@
+<h1>Hello</h1>
+
+
+<h1>#<%= @chat.id%></h1>
+<div id="messages" data-chat-id="<%= @chat.id %>">
+  <% @chat.messages.each do |message| %>
+    <%= render "messages/message", message: message %>
+  <% end %>
+</div>
+
+<%= simple_form_for [ @chat, @message ], remote: true do |f| %>
+  <%= f.input :content, label: false, placeholder: "Message ##{@chat.id}" %>
+  <%= f.button :submit %>
+<% end %>
