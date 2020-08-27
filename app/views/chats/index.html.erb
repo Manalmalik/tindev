@@ -1,1 +1,15 @@
-<h1>All the chats </h1>
+<div class="wrapper">
+  <h1>Your Chats</h1>
+
+  <div class="chat-display-wrapper">
+    <% @chats.each do |chat| %>
+      <% if current_user == chat.sender || current_user == chat.receiver %>
+        <%= chat.sender.username %>
+        <div class="chat-details">
+          <%= chat.messages.last.content %>
+        </div>
+        <%= link_to "See Chat", chat_path(chat)  %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
