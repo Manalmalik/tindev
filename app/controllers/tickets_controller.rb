@@ -1,6 +1,7 @@
 class TicketsController < ApplicationController
 
   def index
+    @category = Category.find(params[:category_id])
     @tickets = policy_scope(Ticket)
   end
 
@@ -23,6 +24,13 @@ class TicketsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @category = Category.find(params[:category_id])
+    @ticket = Ticket.find(params[:id])
+    authorize @ticket
+    authorize @category
   end
 
   private
