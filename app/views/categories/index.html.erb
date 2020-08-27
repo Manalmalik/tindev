@@ -1,0 +1,6 @@
+<h1>Categories</h1>
+<div class="container">
+<p> <% @categories.each do |category| %>
+  <%= link_to category.name, category_tickets_path(category[:id]) %>
+<% end %>  </p>
+</div>
