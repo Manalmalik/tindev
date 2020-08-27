@@ -17,6 +17,14 @@ class TicketPolicy < ApplicationPolicy
     true
   end
 
+  def edit?
+    user
+  end
+
+  def update?
+    user
+  end
+
   def show?
     true
   end
