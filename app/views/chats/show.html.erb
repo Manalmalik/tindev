@@ -1,7 +1,10 @@
-<h1>Hello</h1>
+<div class="container-wrapper">
+  <% if current_user == @chat.sender %>
+    <h1><%= @chat.receiver.username %></h1>
+  <% elsif current_user == @chat.receiver %>
+    <h1><%= @chat.sender.username %></h1>
+  <% end %>
 
-
-<h1>#<%= @chat.id%></h1>
 <div id="messages" data-chat-id="<%= @chat.id %>">
   <% @chat.messages.each do |message| %>
     <%= render "messages/message", message: message %>
@@ -9,6 +12,9 @@
 </div>
 
 <%= simple_form_for [ @chat, @message ], remote: true do |f| %>
-  <%= f.input :content, label: false, placeholder: "Message ##{@chat.id}" %>
-  <%= f.button :submit %>
+  <%= f.input :content, label: false, placeholder: "Type a message..." %>
+  <div class= "button-secondary-small" id="message-form">
+    <%= f.button :submit %>
+  </div>
 <% end %>
+</div>
