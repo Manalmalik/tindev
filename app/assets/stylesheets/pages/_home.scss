@@ -50,7 +50,7 @@ body {
 }
 
 .hero-images {
-  background-image: url("Screens/hero-shape.svg");
+  background-image: asset-url("hero-shape.svg");
   width: 50%;
   height: 360px;
   background-position: center;
@@ -169,7 +169,7 @@ body {
 }
 
 .signup-images {
-  background-image: url("Screens/signup-shape.svg");
+  background-image: asset-url("signup-shape.svg");
   width: 50%;
   height: 360px;
   background-position: center;
