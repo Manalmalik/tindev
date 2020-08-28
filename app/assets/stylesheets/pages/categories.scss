@@ -1,0 +1,81 @@
+
+.head {
+  height: 60vh;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  margin-top: 64px;
+}
+
+.category-title{
+  padding-top: 32px;
+  color: white;
+  h3{
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+    width: 70%;
+    font-weight: lighter;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+
+  }
+  h1{
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    width: 80%;
+  }
+}
+.category-svg{
+  padding-top: 1rem;
+}
+
+.cards-category{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  gap: 32px 32px;
+  margin-bottom: 32px;
+
+  padding: 1rem;
+}
+
+.card-category{
+  position: relative;
+  height: 15vh;
+  border-radius: 10px;
+  border: 1px solid rgb(90,90,90);
+  &:hover{
+    -webkit-box-shadow: -2px 2px 5px 0px rgba(226,64,64,0.72);
+    -moz-box-shadow: -2px 2px 5px 0px rgba(226,64,64,0.72);
+    box-shadow: -2px 2px 5px 0px rgba(226,64,64,0.72);
+    border: 1px solid #e24040;
+  }
+
+}
+.link-to-tickets {
+  color:white;
+  position: absolute;
+  bottom: 0px;
+  left: 0.5rem;
+}
+
+
+.languages{
+  margin-bottom: 32px;
+}
+
+.category-options {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 16px;
+  color: white;
+}
+
+
+
+
+
+
