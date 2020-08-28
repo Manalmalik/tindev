@@ -1,6 +1,30 @@
-<h1>Categories</h1>
-<div class="container">
-<p> <% @categories.each do |category| %>
-  <%= link_to category.name, category_tickets_path(category[:id]) %>
-<% end %>  </p>
+<div class="container-wrap">
+  <div class="head">
+    <div class="category-title">
+      <h1>Start by selecting a topic</h1>
+      <h3>To create a ticket or support other developers, first select a programming language below</h3>
+    </div>
+    <div class="category-svg"><%= image_tag "category.svg" %>
+    </div>
+  </div>
+</div>
+<div class="container-wrap">
+  <div class="category-options">
+    <h4 class='subheadline-wrapper'>Languages
+      <div class="subheadline-line"></div></h4>
+      <h4>Framework</h4>
+      <h4>Other</h4>
+    </div>
+  </div>
+  <div class="container-wrap languages">
+    <a href="/categories "></a>
+    <div class="cards-category">
+     <% @categories.each do |category| %>
+     <%= link_to category_tickets_path(category[:id]) do %>
+     <div class="card-category">
+      <p class="link-to-tickets"> <%= category.name%></p>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
 </div>
