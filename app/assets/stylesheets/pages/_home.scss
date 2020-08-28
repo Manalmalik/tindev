@@ -2,6 +2,12 @@
 $bg-color-light: #181818;
 $bg-color-dark: #131313;
 
+.container-wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: $bg-color-light;

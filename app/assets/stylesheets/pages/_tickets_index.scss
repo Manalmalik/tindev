@@ -1,0 +1,35 @@
+.cards-tickets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 60px 0px;
+}
+
+.card-ticket {
+  border: 1px solid #2e2e2e !important ;
+  border-radius: 12px;
+  padding:  1rem;
+  color: #fff;
+  font-family: 'Poppins' sans-serif;
+  h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .button-secondary-small {
+    margin: 0;
+  }
+}
+
+.header {
+  margin-top: 60px;
+  h1 {
+    font-family: 'Poppins', sans-serif;
+  }
+}

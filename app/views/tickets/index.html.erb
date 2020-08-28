@@ -4,13 +4,16 @@
 
     <%= link_to 'Create a ticket', new_category_ticket_path(params[:category_id]), class: 'button-main'  %>
   </div>
+
   <div class="cards-tickets">
     <% @tickets.each do |ticket| %>
     <div class="card-ticket">
       <h2> <%= ticket.title %></h2>
      <p> <%= @category.name %> </p>
-     <%= link_to 'Get more details', category_ticket_path(@category.id, ticket.id) %>
+     <%= link_to 'Get more details', category_ticket_path(@category.id, ticket.id), class: "button-secondary-small" %>
     </div>
     <% end %>
   </div>
+
+
 </div>
