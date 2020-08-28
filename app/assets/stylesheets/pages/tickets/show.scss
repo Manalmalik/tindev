@@ -1,0 +1,36 @@
+.ticket {
+  padding: 1rem;
+  padding-bottom: 0px;
+  margin-bottom: 1rem;
+  height: auto;
+}
+
+.ticket-title {
+  margin-top: 40px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.ticket-username {
+  color: rgb(90,90,90);
+}
+
+
+.buttons {
+  margin-bottom: 2rem;
+}
+.button-main-small.ticket-show {
+  font-size: 10px;
+  margin-left: 90%;
+}
+.ticket-end {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ticket-description {
+  color: rgba(255,255,255, 0.8)
+}

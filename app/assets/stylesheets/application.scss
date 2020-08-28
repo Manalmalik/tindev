@@ -17,6 +17,10 @@
 @import "components/signupform";
 @import "pages/community-feed";
 @import "pages/videochat";
+@import "pages/tickets_index"
+@import "pages/tickets/show";
+@import "pages/your_chats";
+@import "pages/chat-show";
 
 .container-wrap {
   width: 1000px;

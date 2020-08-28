@@ -2,6 +2,12 @@
 $bg-color-light: #181818;
 $bg-color-dark: #131313;
 
+.container-wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: $bg-color-light;
@@ -50,7 +56,7 @@ body {
 }
 
 .hero-images {
-  background-image: url("Screens/hero-shape.svg");
+  background-image: asset-url("hero-shape.svg");
   width: 50%;
   height: 360px;
   background-position: center;
@@ -94,7 +100,7 @@ body {
     justify-content: space-between;
   }
   .hiw-card {
-    border: 1px solid #414141;
+    border: 1px solid #2e2e2e;
     border-radius: 12px;
     width: 30%;
     padding: 20px;
@@ -169,7 +175,7 @@ body {
 }
 
 .signup-images {
-  background-image: url("Screens/signup-shape.svg");
+  background-image: asset-url("signup-shape.svg");
   width: 50%;
   height: 360px;
   background-position: center;
