@@ -1,9 +1,16 @@
-<div class="container-wrapper">
+<div class="wrapper-message">
+  <div class="conversation-hero">
+  <div class="conversation-title">
   <% if current_user == @chat.sender %>
     <h1><%= @chat.receiver.username %></h1>
   <% elsif current_user == @chat.receiver %>
     <h1><%= @chat.sender.username %></h1>
   <% end %>
+  </div>
+  <div>
+  <%= link_to "Start Video Call", video_page_path, class: "button-secondary-small" %>
+  </div>
+  </div>
 
 <div id="messages" data-chat-id="<%= @chat.id %>">
   <% @chat.messages.each do |message| %>

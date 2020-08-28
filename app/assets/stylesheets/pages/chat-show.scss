@@ -1,3 +1,23 @@
+.wrapper-message {
+  width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+   h1 {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    margin-top: 40px;
+    margin-bottom: 32px;
+  }
+}
+
+.conversation-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .message-user-name {
   color: white;
   margin-right: 8px;
