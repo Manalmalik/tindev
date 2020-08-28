@@ -1,17 +1,21 @@
 <div class="container-wrap">
-  <h1>Ticket info</h1>
-
-  <%= @ticket.title %>
-  <%= @ticket.description %>
-  <%= @category.name %>
-  <%= link_to "Contact User", user_chats_path(current_user.id, ticket_owner: @ticket.user), method: :post %>
+  <div class= 'ticket-info'>
+  <h1 class='ticket-title'><%= @ticket.title %></h1>
+  </div>
+  <div class="ticket">
+   <h3 class="title">  </h3>
+   <p class='ticket-description'> <%= @ticket.description %> </p>
+   <div class="ticket-end">
+   <p class = "ticket-category"> <%= @category.name %> </p>
+   <p class='ticket-username'> Posted by <%= @user.username %> </p>
+ </div>
+ </div>
+ <div class="contact">
+   <%= link_to "Contact User", user_chats_path(current_user.id, ticket_owner: @ticket.user), method: :post, class: 'button-main-small ticket-show' %>
 </div>
+<div class="buttons">
+  <%= link_to "Update Ticket", edit_category_ticket_path(@category, @ticket), class: "button-secondary-small ticket-show" %>
 
-<div class="button-main">
-  <%= link_to "Update Ticket", edit_category_ticket_path(@category, @ticket) %>
+  <%= link_to "Close Ticket", category_ticket_path(@category, @ticket), method: :delete, class: "button-secondary-small ticket-show" %>
 </div>
-
-<div class="button-main">
-  <%= link_to "Close Ticket", category_ticket_path(@category, @ticket), method: :delete %>
 </div>
-
