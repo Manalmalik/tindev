@@ -1,0 +1,56 @@
+#video-page-container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 60px;
+}
+
+#user-token {
+  display: none;
+}
+
+#live-chat-container {
+  display: flex;
+  justify-conent: space-between;
+  align-items: center;
+}
+
+
+#local-media-container-id {
+  padding: 20px;
+  max-height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  video {
+    width: 450px;
+    margin: 0 auto;
+  }
+}
+
+#remote-media-div {
+  padding: 20px;
+   max-height: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   video {
+     width: 450px;
+     margin: 0 auto;
+   }
+}
+
+.video-container {
+  width: 70%;
+}
+
+.chat-container {
+  width: 30%;
+  height: 100%;
+  padding: 20px;
+  background-color: pink;
+}
+
+.video-buttons-container {
+  width: 1200px;
+  margin: 0 auto;
+}
