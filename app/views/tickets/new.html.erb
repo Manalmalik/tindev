@@ -1,7 +1,9 @@
-<h1> create a new ticket </h1>
+<div class="container-wrap">
+    <h1 class="hero-content form">Ask your question
+      <div class="subheadline-line form"></div></h1>
+
+<div class="circle"></div>
 <div class="ticket form">
-    <h2 class="subheadline-wrapper form">Ask your question
-      <div class="subheadline-line form"></div></h2>
        <%= simple_form_for [@category, @ticket] do |f| %>
 
  <div class="form-inputs">
@@ -19,3 +21,4 @@
     </div>
     <% end %>
   </div>
+</div>
