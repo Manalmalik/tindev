@@ -1,15 +1,21 @@
 <div class="container-wrapper">
-  <h1>Your Chats</h1>
+  <h1>Your Messages</h1>
 
   <div class="chat-display-wrapper">
     <% @chats.each do |chat| %>
-      <% if current_user == chat.sender %>
-        <%= chat.receiver.username %>
-      <% elsif current_user == chat.receiver %>
-        <%= chat.sender.username %>
-      <% end %>
-        <%= chat.messages.last.content if chat.messages.exists? %>
-        <%= link_to "See Chat", chat_path(chat)  %>
+      <div class="individual-chat">
+        <div class="individual-chat-info">
+          <% if current_user == chat.sender %>
+            <p class="individual-chat-name"><%= chat.receiver.username %></p>
+          <% elsif current_user == chat.receiver %>
+            <p class="individual-chat-name"><%= chat.sender.username %></p>
+          <% end %>
+          <p class="individual-chat-message"><%= chat.messages.last.content if chat.messages.exists? %></p>
+        </div>
+        <div class="see-chat-button">
+          <%= link_to "See Chat", chat_path(chat), class: "button-secondary-small"  %>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>

@@ -48,8 +48,8 @@ body {
 .card-category{
   position: relative;
   height: 100px;
-  border-radius: 10px;
-  border: 1px solid rgb(90,90,90);
+  border-radius: 12px;
+  border: 1px solid #2e2e2e;
   &:hover{
     -webkit-box-shadow: -2px 2px 5px 0px rgba(226,64,64,0.72);
     -moz-box-shadow: -2px 2px 5px 0px rgba(226,64,64,0.72);

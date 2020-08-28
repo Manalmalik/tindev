@@ -16,8 +16,8 @@ body {
   width: 30vw;
   margin: 20px auto;
   padding: 30px;
-  border-radius: 5px;
-  border: solid 1px rgb(150,150,150);
+  border-radius: 12px;
+  border: solid 1px #2e2e2e;
   box-shadow: 0px 5px 5px 5px $bg-color-dark;
 }
 
@@ -26,6 +26,8 @@ body {
 .form-control {
   background-color: $bg-color-light !important;
   color: white !important;
+  border-radius: 12px;
+  border-color: #2e2e2e;
 }
 
 
@@ -73,11 +75,12 @@ body {
 }
 
 .ticket  {
-
   color: white;
   margin: 20px auto;
-  border-radius: 5px;
-
+  padding: 30px;
+  border-radius: 12px;
+  border: solid 1px #2e2e2e;
+  box-shadow: 0px 5px 5px 5px $bg-color-dark;
 }
 
 #ticket_description{
