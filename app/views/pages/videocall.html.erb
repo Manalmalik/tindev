@@ -1,17 +1,27 @@
 <h1 id="user-token"><%= @token %></h1>
 
-<div id="connect-button" style="color: white">
-  <p>click</p>
+
+
+<div id="video-page-container">
+  <div id="live-chat-container">
+    <div class="video-container">
+      <div id="local-media-container-id">
+        <p><%= @user.username %></p>
+      </div>
+      <div id="remote-media-div">
+
+      </div>
+    </div>
+    <div class="chat-container">
+
+    </div>
+  </div>
+  <div class="video-buttons-container">
+    <div id="connect-button" style="color: white">
+      <p>click</p>
+    </div>
+    <div id="share-button" style="color: white">
+      <p>share</p>
+    </div>
+  </div>
 </div>
-
-<div id="share-button" style="color: white">
-  <p>click</p>
-</div>
-
-<div id="local-media-container-id">
-
-</div>
-
-<div id="remote-media-div"></div>
-
-<p><%= @user.username %></p>
