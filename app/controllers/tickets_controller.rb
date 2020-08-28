@@ -30,8 +30,10 @@ class TicketsController < ApplicationController
   def show
     @category = Category.find(params[:category_id])
     @ticket = Ticket.find(params[:id])
+    @user = User.find(@ticket.user_id)
     authorize @ticket
     authorize @category
+    # authorize @user
   end
 
   def edit

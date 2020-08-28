@@ -1,5 +1,9 @@
 $bg-color-light: #181818;
 $bg-color-dark: #131313;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: $bg-color-light;
+}
 
 .background {
   background-image: url('/assets/Screens/sign-up-back.svg');
@@ -12,21 +16,19 @@ $bg-color-dark: #131313;
   width: 30vw;
   margin: 20px auto;
   padding: 30px;
-  border-radius: 15px;
+  border-radius: 5px;
   border: solid 1px rgb(150,150,150);
   box-shadow: 0px 5px 5px 5px $bg-color-dark;
 }
 
-.subheadline-wrapper.form{
-  text-align: center;
-  margin: 0 auto;
-}
+
 
 .form-control {
-  background-color: $bg-color-dark !important;
+  background-color: $bg-color-light !important;
   color: white !important;
-
 }
+
+
 
 .subheadline-line.form{
   margin-bottom: 1rem !important;
@@ -71,21 +73,25 @@ $bg-color-dark: #131313;
 }
 
 .ticket  {
-  background-color: $bg-color-dark;
+
   color: white;
-  width: 75vw;
   margin: 20px auto;
-  padding: 30px;
-  border-radius: 15px;
-  border: solid 1px rgb(150,150,150);
-  box-shadow: 0px 5px 5px 5px $bg-color-dark;
+  border-radius: 5px;
+
 }
 
 #ticket_description{
-  height: 40vh;
+  height: 200px;
+  border: 1px solid grey !important;
+  padding-bottom: 16px;
 }
 
+#ticket_title{
+  border: 1px solid grey !important;
+}
 
-
+.required {
+  color: rgba(255, 255, 255, 0.7);
+}
 
 
