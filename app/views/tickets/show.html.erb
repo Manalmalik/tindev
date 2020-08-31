@@ -42,11 +42,11 @@
  <div class="contact">
    <%= link_to "Contact User", category_ticket_chats_path(params[:category_id], params[:id], ticket_owner: @ticket.user), method: :post, class: 'button-main-small ticket-show' %>
 </div>
-<div class="buttons">
-  <%= link_to "Update Ticket", edit_category_ticket_path(@category, @ticket), class: "button-secondary-small ticket-show" %>
+<% if current_user.email == @ticket.user.email %>
+  <div class="buttons">
+    <%= link_to "Update Ticket", edit_category_ticket_path(@category, @ticket), class: "button-secondary-small ticket-show" %>
 
-  <%= link_to "Close Ticket", category_ticket_path(@category, @ticket), method: :delete, class: "button-secondary-small ticket-show" %>
+    <%= link_to "Close Ticket", category_ticket_path(@category, @ticket), method: :delete, class: "button-secondary-small ticket-show" %>
+  </div>
+<% end %>
 </div>
-</div>
-
-
