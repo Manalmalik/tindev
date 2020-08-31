@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
+  before_action :online
   before_action :configure_permitted_parameters, if: :devise_controller?
   include Pundit
 
@@ -19,6 +20,9 @@ class ApplicationController < ActionController::Base
   #   flash[:alert] = "You are not authorized to perform this action."
   #   redirect_to(root_path)
   # end
+  def online
+    @user_info = UserInformation.find_by(user_id: current_user.id)
+  end
 
   private
 
