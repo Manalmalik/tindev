@@ -21,7 +21,6 @@ class TicketsController < ApplicationController
     authorize @category
     if @ticket.save
       redirect_to filtered_category_tickets_path(@category.id), notice: 'Ticket was successfully created.'
-      # redirect_to category_ticket(@category.id, @ticket.id), notice: 'Ticket was successfully created.'
     else
       render :new
     end

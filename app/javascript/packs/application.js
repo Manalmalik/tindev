@@ -25,6 +25,7 @@ require("channels")
 // External imports
 import "bootstrap";
 import "packs/twilio"
+
 // Internal imports, e.g:
 import { initChatCable } from '../channels/chat_channel.js';
 import { twilio } from './twilio.js'
@@ -34,3 +35,4 @@ document.addEventListener('turbolinks:load', () => {
   initChatCable();
   twilio();
 });
+

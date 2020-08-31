@@ -1,3 +1,5 @@
+
+
 <div class="wrapper-message">
   <div class="conversation-hero">
   <div class="conversation-title">
@@ -8,7 +10,7 @@
   <% end %>
   </div>
   <div>
-  <%= link_to "Start Video Call", video_page_path, class: "button-secondary-small" %>
+  <%= link_to "Start Video Call",  category_ticket_video_page_path(params[:category_id], params[:ticket_id]), class: "button-secondary-small" %>
   </div>
   </div>
 
@@ -18,7 +20,7 @@
   <% end %>
 </div>
 
-<%= simple_form_for [ @chat, @message ], remote: true do |f| %>
+<%= simple_form_for @message, url: category_ticket_chat_messages_path(params[:category_id], params[:ticket_id], params[:id]), remote: true do |f| %>
   <%= f.input :content, label: false, placeholder: "Type a message..." %>
   <div class= "button-secondary-small" id="message-form">
     <%= f.button :submit %>
