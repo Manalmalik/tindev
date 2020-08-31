@@ -1,0 +1,54 @@
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  .subheadline-line {
+    background-color: #181818;
+    margin-top: 10px;
+  }
+  .subheadline-wrapper {
+    margin-right: 20px;
+    width: auto;
+  }
+  h4 {
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0px;
+  transition: 0.3s;
+}
+
+/* Change color of buttons on hover */
+.tab button:hover h4 {
+  color: #fff;
+  .subheadline-line {
+    background-color: #181818;
+  }
+}
+
+/* Create an active/current tablink class */
+.tab button.active h4 {
+  color: #fff;
+  .subheadline-line {
+    background-color: rgba(249,56,56,1);
+  }
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 0px;
+}
+
+.category-section {
+  .cards-category {
+    padding: 0px !important;
+  }
+}
