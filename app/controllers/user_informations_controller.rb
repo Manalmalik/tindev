@@ -19,6 +19,16 @@ class UserInformationsController < ApplicationController
     end
   end
 
+  def update
+    @user_info = UserInformation.find(params[:id])
+    authorize @user_info
+    if @user_info.update(info_params)
+      redirect_to '/'
+    else
+      render :edit
+    end
+  end
+
   private
 
   def info_params

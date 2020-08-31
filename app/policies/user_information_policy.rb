@@ -6,10 +6,15 @@ class UserInformationPolicy < ApplicationPolicy
   end
 
   def create?
-   true
+   user
   end
 
   def new?
-    true
+    user
   end
+
+  def update?
+    user
+  end
+
 end
