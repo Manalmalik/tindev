@@ -1,6 +1,5 @@
 class UserInformationsController < ApplicationController
 
-
   def new
     @user_info = UserInformation.new
     @user = User.find(params[:user_id])
@@ -27,6 +26,13 @@ class UserInformationsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def show
+    @user_info = UserInformation.find(params[:id])
+    @user = User.find(params[:user_id])
+    authorize @user_info
+    # authorize @user
   end
 
   private

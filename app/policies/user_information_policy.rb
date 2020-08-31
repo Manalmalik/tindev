@@ -17,4 +17,8 @@ class UserInformationPolicy < ApplicationPolicy
     user
   end
 
+  def show
+    true
+  end
+
 end

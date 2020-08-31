@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
   #   redirect_to(root_path)
   # end
   def online
-    @user_info = UserInformation.find_by(user_id: current_user.id)
+    # @user_info = UserInformation.find_by(user_id: current_user.id)
   end
 
   private

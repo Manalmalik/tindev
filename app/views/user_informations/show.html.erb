@@ -1,0 +1,10 @@
+
+<%= @user_info.user.email %>
+<%= @user_info.bio %>
+<%= @user_info.github %>
+<%= @user_info.online %>
+<% @user.tickets.each do |ticket| %>
+  <h4><%= ticket.title %></h4>
+  <%= link_to "See Ticket", user_ticket_path(ticket) %>
+<% end %>
+
