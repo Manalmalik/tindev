@@ -18,8 +18,9 @@
       </li>
 
       <% if user_signed_in? %>
-        <li class="nav-item">
-          <%= link_to "Messages", chats_path(current_user.id), class: "nav-link" %>
+        <li class="nav-item", id="notification">
+          <%= link_to "Messages", chats_path(current_user.id), class: "nav-link", id: "message" %>
+          <div class="d-none" id='notif-badge'><p>1</p></div>
         </li>
         <li class="nav-item">
           <p class="nav-link"> <%= current_user.username %> </p>

@@ -7,8 +7,16 @@ const initChatCable = () => {
 
     consumer.subscriptions.create({ channel: "ChatChannel", id: id }, {
       received(data) {
-        console.log(data);
+        console.log("Fook")
+        // console.log(data);
         messagesContainer.insertAdjacentHTML('beforeend', data);
+
+        console.log(window.location.href)
+        const regex = RegExp('categories\/\d+\/tickets\/\d+\/chats\/\d+');
+        if (!regex.test(window.location.href)) {
+          console.log("yay")
+        }
+
       },
     });
   }
