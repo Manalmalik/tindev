@@ -18,7 +18,7 @@ class ChatsController < ApplicationController
     @chat.sender = @sender
     authorize @chat
     @chat.save
-    redirect_to chat_path(@chat)
+    redirect_to category_ticket_chat_path(params[:category_id], params[:ticket_id], @chat)
   end
 private
   def filtered(chats)

@@ -12,9 +12,9 @@ skip_before_action :verify_authenticity_token
         @chat,
         render_to_string(partial: "message", locals: { message: @message })
       )
-      redirect_to chat_path(@chat, anchor: "message-#{@message.id}")
+      redirect_to category_ticket_chat_path(@chat, anchor: "message-#{@message.id}")
     else
-      render chat_path(@chat)
+      render category_ticket_chat_path(@chat)
     end
   end
 
