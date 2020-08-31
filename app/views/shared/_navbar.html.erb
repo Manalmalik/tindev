@@ -19,7 +19,7 @@
 
       <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "Messages", user_chats_path(current_user.id), class: "nav-link" %>
+          <%= link_to "Messages", chats_path(current_user.id), class: "nav-link" %>
         </li>
         <li class="nav-item">
           <p class="nav-link"> <%= current_user.username %> </p>
