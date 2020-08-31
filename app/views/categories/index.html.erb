@@ -20,7 +20,7 @@
     <a href="/categories "></a>
     <div class="cards-category">
      <% @categories.each do |category| %>
-     <%= link_to category_tickets_path(category[:id]) do %>
+     <%= link_to filtered_category_tickets_path(category[:id]) do %>
      <div class="card-category">
       <p class="link-to-tickets"> <%= category.name%></p>
     </div>

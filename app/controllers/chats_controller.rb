@@ -1,8 +1,7 @@
 class ChatsController < ApplicationController
   def index
-    @chats = Chat.all
-    @messages = Message.all.where(id: current_user.id)
-    @chats = policy_scope(Chat)
+    @chats = filtered(policy_scope(Chat))
+    @messages = Message.where(id: current_user.id)
   end
 
   def show
@@ -21,4 +20,12 @@ class ChatsController < ApplicationController
     @chat.save
     redirect_to chat_path(@chat)
   end
+private
+  def filtered(chats)
+    chats_sent = chats.where(sender_id: params[:user_id])
+    chats_received = chats.where(receiver_id: params[:user_id])
+    @chats = chats_received + chats_sent
+    # authorize @chats
+  end
+
 end
