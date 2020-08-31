@@ -6,7 +6,7 @@ class TicketPolicy < ApplicationPolicy
   end
 
   def index
-    record.user == user
+    true
   end
 
   def create?
@@ -32,4 +32,9 @@ class TicketPolicy < ApplicationPolicy
   def destroy?
     user
   end
+
+  def filtered?
+    true
+  end
+
 end
