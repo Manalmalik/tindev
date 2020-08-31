@@ -4,7 +4,7 @@ class CreateUserInformations < ActiveRecord::Migration[6.0]
       t.boolean :online, default: false
       t.string :github
       t.text :bio
-      t.references :users
+      t.references :user
 
       t.timestamps
     end

@@ -1,4 +1,4 @@
-class UserinformationPolicy < ApplicationPolicy
+class UserInformationPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
@@ -6,7 +6,7 @@ class UserinformationPolicy < ApplicationPolicy
   end
 
   def create?
-    true
+   true
   end
 
   def new?
