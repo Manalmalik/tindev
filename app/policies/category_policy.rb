@@ -4,12 +4,15 @@ class CategoryPolicy < ApplicationPolicy
       scope.all
     end
   end
-def index
-  true
-end
+  def index
+    true
+  end
 
-def show?
-  true
-end
+  def show?
+    true
+  end
+  def filtered?
+    true
+  end
 
 end

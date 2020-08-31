@@ -20,7 +20,7 @@ class TicketsController < ApplicationController
     authorize @ticket
     authorize @category
     if @ticket.save
-      redirect_to category_tickets_path(@category.id), notice: 'Ticket was successfully created.'
+      redirect_to filtered_category_tickets_path(@category.id), notice: 'Ticket was successfully created.'
       # redirect_to category_ticket(@category.id, @ticket.id), notice: 'Ticket was successfully created.'
     else
       render :new
@@ -33,7 +33,6 @@ class TicketsController < ApplicationController
     @user = User.find(@ticket.user_id)
     authorize @ticket
     authorize @category
-    # authorize @user
   end
 
   def edit
@@ -62,6 +61,13 @@ class TicketsController < ApplicationController
     authorize @category
     @ticket.destroy
     redirect_to category_tickets_path
+  end
+
+  def filtered
+    @category = Category.find(params[:category_id])
+    @tickets = Ticket.where(category: params[:category_id])
+    authorize @tickets
+    authorize @category
   end
 
   private

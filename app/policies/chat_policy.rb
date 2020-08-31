@@ -12,4 +12,8 @@ class ChatPolicy < ApplicationPolicy
   def create?
     user
   end
+
+  def filtered?
+    user
+  end
 end
