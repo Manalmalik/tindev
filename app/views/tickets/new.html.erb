@@ -1,22 +1,20 @@
 <div class="container-wrap">
-    <h1 class="hero-content form">Ask your question
-      <div class="subheadline-line form"></div></h1>
+  <h1 class="hero-content form">Ask your question
+    <div class="subheadline-line form"></div></h1>
 
-<div class="circle"></div>
-<div class="ticket form">
-       <%= simple_form_for [@category, @ticket] do |f| %>
+    <div class="circle"></div>
+    <div class="ticket form">
+     <%= simple_form_for [@category, @ticket] do |f| %>
 
- <div class="form-inputs">
+     <div class="form-inputs">
        <%= f.input :title,
-       required: true,
-       autofocus: true %>
-       <%= f.input :description,
+       required: true %>
+       <%= f.rich_text_area :description,
        as: :text,
-       required: true,
-       autofocus: true%>
+       required: true %>
      </div>
 
-     <div class="form-actions button-main-small">
+    <div class="form-actions button-main-small">
       <%= f.button :submit, "Submit" %>
     </div>
     <% end %>

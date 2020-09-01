@@ -22,6 +22,7 @@ require("channels")
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
 
+
 // External imports
 import "bootstrap";
 import "packs/twilio";
@@ -41,3 +42,6 @@ document.addEventListener('turbolinks:load', () => {
   hoverHandle();
 });
 
+
+require("trix")
+require("@rails/actiontext")

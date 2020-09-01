@@ -1,14 +1,14 @@
 <div>
-<%= simple_form_for [@category, @ticket] do |f| %>
-<%= f.error_notification %>
-<%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <%= simple_form_for [@category, @ticket] do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
     <%= f.input :title %>
-    <%= f.input :description %>
+    <%= f.rich_text_area :description %>
   </div>
-    <span class="loginBtn btn-padding", id="primaryBtn">
+  <span class="loginBtn btn-padding", id="primaryBtn">
     <%= f.button :submit, id: 'submit-button', class:"links" %>
   </span>
-  </div>
-<% end %>
+  <% end %>
+</div>
