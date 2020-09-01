@@ -43,12 +43,24 @@ const twilio = () => {
       });
 
       room.participants.forEach(participant => {
+        const id = participant.identity.toString();
       participant.tracks.forEach(publication => {
          publication.on('unsubscribed', () => {
            /* Hide the associated <video> element and show an avatar image. */
-           console.log(document.getElementById('remote-media-div'));
-
-         });
+         /* const remoteContainer = document.getElementById('remote-media-div');
+          console.log(remoteContainer);*/
+          const video = document.querySelector("#remote-media-div video");
+          //console.log(video);
+          if (video != null){
+            video.remove();
+            const rdiv = document.getElementById("remote-media-div");
+            console.log("rdiv");
+            console.log(rdiv);
+            const sharedVideo = rdiv.querySelector("#rvideo");
+            console.log("sharedVideo");
+            console.log(sharedVideo);
+          }
+        });
       });
     });
 
@@ -63,10 +75,14 @@ const twilio = () => {
 
       const identity = participant.identity;
       participant.on('trackSubscribed', track => {
-        const div = document.createElement("div");
-        div.id = identity;
-        div.appendChild(track.attach());
-        remoteDiv.appendChild(div);
+        // const div = document.createElement("div");
+        // div.id = identity;
+        // div.appendChild(track.attach());
+        // remoteDiv.appendChild(div);
+        remoteDiv.appendChild(track.attach());
+        if(remoteDiv.lastChild.nodeName == "VIDEO"){
+          remoteDiv.lastChild.id = "rvideo";
+        }
       });
     });
 
@@ -84,15 +100,16 @@ const twilio = () => {
 
         shareScreen.addEventListener('click', event => {
           async function startCapture() {
-          const stream = await navigator.mediaDevices.getDisplayMedia();
-          const screenTrack = new LocalVideoTrack(stream.getTracks()[0]);
-          room.localParticipant.publishTrack(screenTrack);
-          room.localParticipant.videoTracks.forEach(publication => {
-            publication.track.stop();
-            publication.unpublish();
-          });
-        }
+            const stream = await navigator.mediaDevices.getDisplayMedia();
+            const screenTrack = new LocalVideoTrack(stream.getTracks()[0]);
+            room.localParticipant.publishTrack(screenTrack);
+            room.localParticipant.videoTracks.forEach(publication => {
+              publication.track.stop();
+              publication.unpublish();
+            });
+          }
           startCapture();
+
         });
 
         endCall.addEventListener('click', event => {
