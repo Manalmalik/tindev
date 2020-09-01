@@ -29,11 +29,15 @@ class UserInformationsController < ApplicationController
     @user_info = UserInformation.find(params[:id])
     authorize @user_info
     if @user_info.update(info_params)
-      redirect_to user_path(@user)
+      redirect_to request.referrer
     else
       render :edit
     end
   end
+
+  # def toggle_status
+
+  # end
 
   def show
     @user = User.find(params[:id])
@@ -47,5 +51,4 @@ class UserInformationsController < ApplicationController
   def info_params
     params.require(:user_information).permit(:github, :photo, :bio, :online)
   end
-
 end
