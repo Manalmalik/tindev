@@ -11,6 +11,9 @@
   }
   h4 {
     color: rgba(255, 255, 255, 0.4);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
   }
 }
 
@@ -36,6 +39,7 @@
 /* Create an active/current tablink class */
 .tab button.active h4 {
   color: #fff;
+  font-weight: 500;
   .subheadline-line {
     background-color: rgba(249,56,56,1);
   }
