@@ -1,7 +1,7 @@
 const twilio = () => {
 
   const btn = document.getElementById("connect-button")
-  const share = document.getElementById("share-button")
+  const shareScreen = document.getElementById("share-button")
   const endCall = document.getElementById("end-button")
   const user_token = document.getElementById("user-token")
 
@@ -19,6 +19,11 @@ const twilio = () => {
         name: 'my-room-name',
         video: { width: 640}
       });
+
+     // Add Call option buttons
+     shareScreen.classList.add("show");
+     endCall.classList.add("show");
+     btn.classList.add("hide");
 
      // Connecting Participant
       room.on('participantConnected', participant => {
@@ -64,7 +69,7 @@ const twilio = () => {
 
 
 
-        share.addEventListener('click', event => {
+        shareScreen.addEventListener('click', event => {
           async function startCapture() {
           const stream = await navigator.mediaDevices.getDisplayMedia();
           const screenTrack = new LocalVideoTrack(stream.getTracks()[0]);
