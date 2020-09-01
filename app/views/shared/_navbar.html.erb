@@ -29,9 +29,9 @@
           <% if @info == nil %>
               <p> feature soon </p>
             <% else %>
-             <p class="nav-link"> <%= simple_form_for @info do |f| %>
-              <%= f.input :online, as: :select %>
-              <%= f.button :submit, "Update" %>
+             <p class="nav-link"> <%= form_for @info do |f| %>
+              <%= f.check_box :online %>
+              <%= f.submit "Submit"%>
               <% end %> </p>
           <% end %>
 
