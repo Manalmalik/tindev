@@ -45,17 +45,30 @@ body {
   gap: 32px 32px;
   margin-bottom: 16px;
   padding: 1rem;
+  a:hover {
+    text-decoration: none !important;
+  }
 }
+
+#dot-and-language {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 
 .link-to-tickets {
   color:white;
-  position: absolute;
-  bottom: 0px;
-  left: 1.5rem;
+  margin-bottom: 0;
+  margin-left: 12px;
+  font-weight: 500px !important;
+  font-size: 20px;
 }
 
 .card-category{
-  position: relative;
+  display: flex;
+  align-items: flex-end;
   height: 100px;
   border-radius: 12px;
   border: 1px solid #2e2e2e;
@@ -67,13 +80,10 @@ body {
   margin-bottom: 32px;
 }
 .colour-circle {
-  position: absolute;
-  bottom: 23px;
-  left: 0.5rem;
   border-radius: 50%;
   height: 0.5rem;
   width: 0.5rem;
-  box-shadow: 0px 0.4px 0.4px 0.6px rgb(18,18,18);
+  box-shadow: 0px 0px 0px 0.6px rgb(18,18,18);
 }
 
 .circle-container {

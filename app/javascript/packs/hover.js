@@ -5,9 +5,9 @@ const hoverHandle = () => {
     cards.forEach(card => {
       card.addEventListener("mouseenter", function(event){
         const colour = card.dataset.colour
-        card.style.boxShadow = `-2px 2px 5px 0px ${colour}`;
-        card.style.webkitBoxShadow = `-2px 2px 5px 0px ${colour}`;
-        card.style.mozBoxShadow = `-2px 2px 5px 0px ${colour}`;
+        // card.style.boxShadow = `-2px 2px 5px 0px ${colour}`;
+        // card.style.webkitBoxShadow = `-2px 2px 5px 0px ${colour}`;
+        // card.style.mozBoxShadow = `-2px 2px 5px 0px ${colour}`;
         card.style.border = `1px solid ${colour}`;
       })
     });

@@ -35,8 +35,10 @@
            <% @categories.each do |category| %>
            <%= link_to filtered_category_tickets_path(category[:id]) do %>
            <div class="card-category" data-colour= '<%= category.colour %>'>
-             <div class="colour-circle" style='background-color: <%= category.colour %>'></div>
-             <p class="link-to-tickets"> <%= category.name%></p>
+              <div id="dot-and-language">
+                <div class="colour-circle" style='background-color: <%= category.colour %>'></div>
+                <p class="link-to-tickets"> <%= category.name%></p>
+             </div>
            </div>
            <% end %>
            <% end %>
