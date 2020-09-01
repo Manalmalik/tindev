@@ -5,9 +5,9 @@
       <div class="individual-chat">
         <div class="individual-chat-info">
           <% if current_user == chat.sender %>
-            <p class="individual-chat-name"><%= chat.receiver.username %></p>
+            <div class="individual-chat-name"><p><%= chat.receiver.username %></p></div>
           <% elsif current_user == chat.receiver %>
-            <p class="individual-chat-name"><%= chat.sender.username %></p>
+            <div class="individual-chat-name"><p><%= chat.sender.username %></p></div>
           <% end %>
           <p class="individual-chat-message"><%= chat.messages.last.content if chat.messages.exists? %></p>
         </div>

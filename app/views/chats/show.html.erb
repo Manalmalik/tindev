@@ -1,13 +1,12 @@
-
-
 <div class="wrapper-message">
   <div class="conversation-hero">
   <div class="conversation-title">
-  <% if current_user == @chat.sender %>
-    <h1><%= @chat.receiver.username %></h1>
+  <h1><%= @chat.ticket.title %></h1>
+  <!--<% if current_user == @chat.sender %>
+    <p><%= @chat.receiver.username %></p>
   <% elsif current_user == @chat.receiver %>
-    <h1><%= @chat.sender.username %></h1>
-  <% end %>
+    <p><%= @chat.sender.username %></p>
+  <% end %>-->
   </div>
   <div>
   <%= link_to "Start Video Call",  category_ticket_video_page_path(params[:category_id], params[:ticket_id]), class: "button-secondary-small" %>
