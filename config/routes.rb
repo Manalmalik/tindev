@@ -15,9 +15,8 @@ Rails.application.routes.draw do
       end
     end
   end
-  resources :users, only: [] do
-    resources :user_informations, only: [:new, :create, :show]
-    resources :tickets, only: [:show]
+  resources :users, only: [:show], to: 'user_informations#show' do
+    resources :user_informations, only: [:new, :create]
   end
 
   resources :user_informations, only: [:update]

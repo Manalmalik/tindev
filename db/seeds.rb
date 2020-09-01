@@ -8,6 +8,7 @@
 require 'faker'
 
 User.destroy_all
+UserInformation.destroy_all
 
 5.times do
   user = User.new(
@@ -19,3 +20,15 @@ User.destroy_all
     user.save!
     p user.username
 end
+
+5.times do
+  user_info = UserInformation.new(
+    {
+      online: true,
+      github: Faker::Movies::StarWars.character,
+      bio: Faker::Movies::StarWars.character,
+      user: User.find(User.pluck(:id).sample)
+    })
+    user_info.save!
+end
+

@@ -1,10 +1,12 @@
+<div id="profile-page-container">
+  <h4><%= @user_info.user.email %></h4>
+  <h4><%= @user_info.bio %></h4>
+  <h4><%= @user_info.github %></h4>
+  <h4><%= @user_info.online %></h4>
 
-<%= @user_info.user.email %>
-<%= @user_info.bio %>
-<%= @user_info.github %>
-<%= @user_info.online %>
-<% @user.tickets.each do |ticket| %>
-  <h4><%= ticket.title %></h4>
-  <%= link_to "See Ticket", user_ticket_path(ticket) %>
-<% end %>
 
+  <% @user.tickets.each do |ticket| %>
+    <h4><%= ticket.title %></h4>
+    <%= link_to "See Ticket", category_ticket_path(ticket.category, ticket) %>
+  <% end %>
+</div>
