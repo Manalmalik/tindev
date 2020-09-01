@@ -1,0 +1,26 @@
+<div class="container-wrap">
+    <h1 class="hero-content form">Update profile info
+      <div class="subheadline-line form"></div></h1>
+
+<div class="circle"></div>
+<div class="ticket form">
+       <%= simple_form_for @user_info do |f| %>
+
+ <div class="form-inputs">
+       <%= f.input :github,
+       required: false,
+       autofocus: true %>
+       <%= f.input :bio,
+       as: :text,
+       required: false,
+       autofocus: true%>
+    <%= f.input :photo, as: :file %>
+
+     </div>
+
+     <div class="form-actions button-main-small">
+      <%= f.button :submit, "Submit" %>
+    </div>
+    <% end %>
+  </div>
+</div>

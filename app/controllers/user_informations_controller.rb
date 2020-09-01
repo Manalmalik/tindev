@@ -1,6 +1,5 @@
 class UserInformationsController < ApplicationController
 
-
   def new
     @user_info = UserInformation.new
     @user = User.find(params[:user_id])
@@ -19,14 +18,28 @@ class UserInformationsController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+    @user_info = @user.user_information
+    authorize @user_info
+  end
+
   def update
+    @user = current_user
     @user_info = UserInformation.find(params[:id])
     authorize @user_info
     if @user_info.update(info_params)
-      redirect_to '/'
+      redirect_to user_path(@user)
     else
       render :edit
     end
+  end
+
+  def show
+    @user = User.find(params[:id])
+    @user_info = @user.user_information
+    authorize @user_info
+    # authorize @user
   end
 
   private
