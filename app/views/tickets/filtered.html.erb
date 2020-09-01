@@ -8,7 +8,7 @@
   </div>
 
   <div class="cards-tickets">
-    <% @tickets.each do |ticket| %>
+    <% @tickets.reverse.each do |ticket| %>
     <div class="card-ticket">
       <h2> <%= ticket.title %></h2>
      <p> <%= @category.name %> </p>
