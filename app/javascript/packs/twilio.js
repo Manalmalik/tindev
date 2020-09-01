@@ -4,6 +4,7 @@ const twilio = () => {
   const shareScreen = document.getElementById("share-button")
   const endCall = document.getElementById("end-button")
   const user_token = document.getElementById("user-token")
+  const remoteDiv = document.getElementById('remote-media-div')
 
   if (btn) {
   const token_1 = user_token.innerHTML
@@ -41,22 +42,34 @@ const twilio = () => {
         });
       });
 
+      room.participants.forEach(participant => {
+      participant.tracks.forEach(publication => {
+         publication.on('unsubscribed', () => {
+           /* Hide the associated <video> element and show an avatar image. */
+           console.log(document.getElementById('remote-media-div'));
+
+         });
+      });
+    });
+
       // Remote Participant
-      function RemoteParticipant(){
-          room.participants.forEach(participant => {
-            participant.tracks.forEach(publication => {
-              if (publication.track) {
-                document.getElementById('remote-media-div').appendChild(publication.track.attach());
-              }
-            });
 
-         participant.on('trackSubscribed', track => {
-            document.getElementById('remote-media-div').appendChild(track.attach());
-          });
+      room.participants.forEach(participant => {
+        participant.tracks.forEach(publication => {
+          if (publication.track) {
+            document.getElementById('remote-media-div').appendChild(publication.track.attach());
+          }
         });
-      }
 
-        RemoteParticipant();
+      const identity = participant.identity;
+      participant.on('trackSubscribed', track => {
+        const div = document.createElement("div");
+        div.id = identity;
+        div.appendChild(track.attach());
+        remoteDiv.appendChild(div);
+      });
+    });
+
 
           var Video = require('twilio-video');
             // Request audio and video tracks
@@ -74,6 +87,10 @@ const twilio = () => {
           const stream = await navigator.mediaDevices.getDisplayMedia();
           const screenTrack = new LocalVideoTrack(stream.getTracks()[0]);
           room.localParticipant.publishTrack(screenTrack);
+          room.localParticipant.videoTracks.forEach(publication => {
+            publication.track.stop();
+            publication.unpublish();
+          });
         }
           startCapture();
         });
