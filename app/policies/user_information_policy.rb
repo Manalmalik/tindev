@@ -21,4 +21,8 @@ class UserInformationPolicy < ApplicationPolicy
     true
   end
 
+  def edit?
+
+  end
+
 end
