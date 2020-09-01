@@ -1,8 +1,10 @@
 <div class="container-wrap">
   <div class="header">
-    <h1>Community feed for <%=@category.name %> </h1>
-
-    <%= link_to 'Create a ticket', new_category_ticket_path(params[:category_id]), class: 'button-main'  %>
+    <div class="circle-container">
+    <div class="bigger-cirle"style='background-color: <%= @category.colour %>;'></div>
+    <h1><%=@category.name %> </h1>
+    </div>
+    <%= link_to 'Create a ticket', new_category_ticket_path(params[:category_id]), class: 'button-main create-a-ticket'  %>
   </div>
 
   <div class="cards-tickets">
