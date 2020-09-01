@@ -18,6 +18,21 @@ body {
 .category-title{
   padding-top: 32px;
   color: white;
+  h1 {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  h4 {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    line-height: 2rem;
+  }
 }
 .category-svg{
   padding-top: 1rem;

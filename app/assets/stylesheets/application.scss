@@ -7,7 +7,7 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
+@import "./actiontext.scss";
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
@@ -19,6 +19,7 @@
 @import "pages/videochat";
 @import "pages/tickets_index";
 @import "pages/tickets/show";
+@import "pages/tickets/ticket-form";
 @import "pages/your_chats";
 @import "pages/chat-show";
 @import "components/notif";
