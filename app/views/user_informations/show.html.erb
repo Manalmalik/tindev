@@ -1,12 +1,15 @@
 <div id="profile-page-container">
   <div class="profile-image-container">
-    <% if @user_info.photo.key %>
-       <%= cl_image_tag @user_info.photo.key, crop: :fill, class: 'profile-image' %>
-    <% else %>
-      <%= image_tag 'Tindev.svg' %>
-    <% end %>
-
+      <% if @user_info.photo.attached? %>
+         <%= cl_image_tag @user_info.photo.key, class: 'profile-image' %>
+      <% else %>
+        <%= image_tag 'https://res.cloudinary.com/dc0boljmu/image/upload/v1598961887/placeholder_opar57.jpg', class: 'profile-image' %>
+      <% end %>
   </div>
+
+
+
+
   <h4><%= @user_info.user.email %></h4>
   <h4><%= @user_info.bio %></h4>
   <h4><%= @user_info.github %></h4>
@@ -20,26 +23,21 @@
 </div>
 
 
+<%= link_to "Update Profile", edit_user_information_path %>
 
-
-
+<!--
 <div class="container-wrap">
-    <h1 class="hero-content form">Update profile info
-      <div class="subheadline-line form"></div></h1>
-
-<div class="circle"></div>
-<div class="ticket form">
+  <div class="ticket form">
        <%= simple_form_for @user_info do |f| %>
 
- <div class="form-inputs">
-
+  <div class="form-inputs">
+    <% f.input :bio %>
     <%= f.input :photo, as: :file %>
-
-     </div>
-
-     <div class="form-actions button-main-small">
-      <%= f.button :submit, "Submit" %>
-    </div>
+  </div>
+  <div class="form-actions button-main-small">
+    <%= f.button :submit, "Submit" %>
+  </div>
     <% end %>
   </div>
 </div>
+ -->

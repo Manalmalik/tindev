@@ -22,7 +22,7 @@ class UserInformationPolicy < ApplicationPolicy
   end
 
   def edit?
-
+    true
   end
 
 end

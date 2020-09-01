@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     resources :user_informations, only: [:new, :create]
   end
 
-  resources :user_informations, only: [:update]
+  resources :user_informations, only: [:update, :edit]
 
   resources :chats, only: [:index]
 
