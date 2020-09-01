@@ -7,24 +7,84 @@
     <div class="category-svg"><%= image_tag "category.svg" %>
     </div>
   </div>
-</div>
-<div class="container-wrap">
-  <div class="category-options">
-    <h4 class='subheadline-wrapper'>Languages
-      <div class="subheadline-line"></div></h4>
-      <h4>Framework</h4>
-      <h4>Other</h4>
+
+  <div class="category-section">
+    <div class="tab">
+      <button class="tablinks active" onclick="openTab(event, 'Languages')">
+        <h4 class='subheadline-wrapper'>Languages
+          <div class="subheadline-line"></div>
+        </h4>
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'Frameworks')">
+        <h4 class='subheadline-wrapper'>Frameworks
+          <div class="subheadline-line"></div>
+        </h4>
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'Other')">
+        <h4 class='subheadline-wrapper'>Other
+          <div class="subheadline-line"></div>
+        </h4>
+      </button>
+    </div>
+
+    <div id="Languages" class="tabcontent" style="display: block">
+      <div class="container-wrap">
+        <div class="container-wrap languages">
+          <a href="/categories "></a>
+          <div class="cards-category">
+           <% @categories.each do |category| %>
+           <%= link_to filtered_category_tickets_path(category[:id]) do %>
+           <div class="card-category" data-colour= '<%= category.colour %>'>
+             <div class="colour-circle" style='background-color: <%= category.colour %>'></div>
+             <p class="link-to-tickets"> <%= category.name%></p>
+           </div>
+           <% end %>
+           <% end %>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <div id="Frameworks" class="tabcontent">
+    <div class="container-wrap">
+      <div class="container-wrap languages">
+        <a href="/categories "></a>
+        <div class="cards-category">
+          <h3>Rails</h3>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="container-wrap languages">
-    <a href="/categories "></a>
-    <div class="cards-category">
-     <% @categories.each do |category| %>
-     <%= link_to filtered_category_tickets_path(category[:id]) do %>
-     <div class="card-category">
-      <p class="link-to-tickets"> <%= category.name%></p>
-    </div>
-    <% end %>
-    <% end %>
-  </div>
+
+  <div id="Other" class="tabcontent">
+    <div class="container-wrap">
+      <div class="container-wrap languages">
+        <a href="/categories "></a>
+        <div class="cards-category">
+         <h3>Shizzl</h3>
+       </div>
+     </div>
+   </div>
+ </div>
 </div>
+</div>
+
+
+<script>
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+</script>
+
+
+

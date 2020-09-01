@@ -7,10 +7,10 @@ class User < ApplicationRecord
   has_many :tickets, dependent: :destroy
   has_many :chats_as_sender, :class_name => 'Chat', :foreign_key => 'sender_id', dependent: :destroy
   has_many :chats_as_receiver, :class_name => 'Chat', :foreign_key => 'receiver_id', dependent: :destroy
-  has_one_attached :photo
+  has_one :user_information, dependent: :destroy
 
   validates :username, presence: true, uniqueness: true
-  validates :online, default: false
+
 
   def chats
     chats_as_sender + chats_as_receiver

@@ -15,6 +15,11 @@ Rails.application.routes.draw do
       end
     end
   end
+  resources :users, only: [] do
+    resources :user_informations, only: [:new, :create]
+  end
+    resources :user_informations, only: [:update]
+
   resources :chats, only: [:index]
 
 end
