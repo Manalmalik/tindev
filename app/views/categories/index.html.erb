@@ -33,40 +33,39 @@
           <a href="/categories "></a>
           <div class="cards-category">
            <% @categories.each do |category| %>
+           <%= link_to filtered_category_tickets_path(category[:id]) do %>
+           <div class="card-category" data-colour= '<%= category.colour %>'>
+             <div class="colour-circle" style='background-color: <%= category.colour %>'></div>
+             <p class="link-to-tickets"> <%= category.name%></p>
+           </div>
+           <% end %>
+           <% end %>
+         </div>
+       </div>
+     </div>
+   </div>
 
-        <%= link_to filtered_category_tickets_path(category[:id]) do %>
-        <div class="card-category" style='border: 1px solid <%= category.colour %>;'>
-
-          <p class="link-to-tickets"> <%= category.name%></p>
+   <div id="Frameworks" class="tabcontent">
+    <div class="container-wrap">
+      <div class="container-wrap languages">
+        <a href="/categories "></a>
+        <div class="cards-category">
+          <h3>Rails</h3>
         </div>
-        <% end %>
-        <% end %>
       </div>
     </div>
   </div>
-</div>
 
-<div id="Frameworks" class="tabcontent">
-  <div class="container-wrap">
-    <div class="container-wrap languages">
-      <a href="/categories "></a>
-      <div class="cards-category">
-        <h3>Rails</h3>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="Other" class="tabcontent">
-  <div class="container-wrap">
-    <div class="container-wrap languages">
-      <a href="/categories "></a>
-      <div class="cards-category">
-       <h3>Shizzl</h3>
+  <div id="Other" class="tabcontent">
+    <div class="container-wrap">
+      <div class="container-wrap languages">
+        <a href="/categories "></a>
+        <div class="cards-category">
+         <h3>Shizzl</h3>
+       </div>
      </div>
    </div>
  </div>
-</div>
 </div>
 </div>
 
@@ -86,7 +85,6 @@
     evt.currentTarget.className += " active";
   }
 </script>
-
 
 
 
