@@ -1,7 +1,14 @@
 <div class="message-container" id="message-<%= message.id %>">
+  <div class="message-header">
+  <% if message.user.user_information.photo.attached? %>
+    <%= cl_image_tag @chat.ticket.user.user_information.photo.key, class: 'profile-image-message' %>
+  <% else %>
+    <%= image_tag 'https://res.cloudinary.com/dc0boljmu/image/upload/v1598961887/placeholder_opar57.jpg', class: 'profile-image-message' %>
+  <% end %>
   <i class="author">
     <span class="message-user-name"><%= message.user.username %></span>
     <small class="time-and-date"><%= message.created_at.strftime("%l:%M%p") %></small>
   </i>
+  </div>
   <p class="message-user-content"><%= message.content %></p>
 </div>
