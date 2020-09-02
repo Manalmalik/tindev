@@ -22,13 +22,16 @@
   }
   .footer-link {
     text-decoration: none !important;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.6);
     font-size: 1rem;
     font-weight: 200;
   }
   ul {
     list-style-type: none !important;
     padding: 0;
+    a:hover {
+      color: #fff;
+    }
     li {
       margin-bottom: 8px;
       color: #fff;
@@ -44,3 +47,5 @@
   display: flex;
   justify-content: space-between;
 }
+
+
