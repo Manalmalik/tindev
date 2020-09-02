@@ -25,6 +25,7 @@ p.nav-link {
   margin: 0 10px;
 }
 
+
 .avatar:hover {
   cursor: pointer;
 }
@@ -33,3 +34,18 @@ p.nav-link {
   display: flex;
   align-items: center;
 }
+
+.avatar-status {
+  position: relative;
+}
+
+.status {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #A82929;
+  position: absolute;
+  bottom: 5px;
+  right: 1px;
+}
+
