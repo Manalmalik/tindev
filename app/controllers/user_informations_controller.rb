@@ -11,7 +11,7 @@ class UserInformationsController < ApplicationController
     @user_info = UserInformation.find(params[:id])
     authorize @user_info
     if @user_info.update(info_params)
-      redirect_to request.referrer
+      redirect_to user_path(current_user.id)
     else
       render :edit
     end
