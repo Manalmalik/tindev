@@ -5,14 +5,6 @@ class UserInformationPolicy < ApplicationPolicy
     end
   end
 
-  def create?
-   user
-  end
-
-  def new?
-    user
-  end
-
   def update?
     user
   end
@@ -25,4 +17,7 @@ class UserInformationPolicy < ApplicationPolicy
     true
   end
 
+  def toggle_status?
+    true
+  end
 end

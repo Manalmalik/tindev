@@ -11,8 +11,16 @@ class User < ApplicationRecord
 
   validates :username, presence: true, uniqueness: true
 
+  before_create :add_user_information
 
   def chats
     chats_as_sender + chats_as_receiver
+  end
+
+  private
+
+  def add_user_information
+    @user_info = UserInformation.new
+    self.user_information = @user_info
   end
 end

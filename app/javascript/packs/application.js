@@ -28,18 +28,19 @@ import "bootstrap";
 import "packs/twilio";
 import "packs/hover";
 
+
 // Internal imports, e.g:
 import { initChatCable } from '../channels/chat_channel.js';
 import { twilio } from './twilio.js';
 import { hoverHandle } from './hover.js';
-
-
+import { availibility } from './availibility.js'
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   initChatCable();
   twilio();
   hoverHandle();
+  availibility();
 });
 
 

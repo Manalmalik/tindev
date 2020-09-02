@@ -32,11 +32,18 @@
   <h1 class='ticket-title'><%= @ticket.title %></h1>
   </div>
   <div class="ticket">
-   <h3 class="title">  </h3>
+   <div class="dot-online">
+     <% if @user.user_information.online == true %>
+    <div class="online" style='background-color: green'></div>
+    <% else %>
+     <div class="online" style='background-color: #A82929'></div>
+   <% end %>
+ </div>
    <p class='ticket-description'> <%= @ticket.description %> </p>
    <div class="ticket-end">
    <p class = "ticket-category"> <%= @category.name %> </p>
    <p class='ticket-username'> Posted by <%= @user.username %> </p>
+
  </div>
  </div>
  <div class="contact">

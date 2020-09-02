@@ -25,6 +25,7 @@ p.nav-link {
   margin: 0 10px;
 }
 
+
 .avatar:hover {
   cursor: pointer;
 }
@@ -33,3 +34,14 @@ p.nav-link {
   display: flex;
   align-items: center;
 }
+
+.avatar-status {
+  position: relative;
+}
+
+.avatar {
+  height: 35px;
+  width: 35px;
+}
+
+

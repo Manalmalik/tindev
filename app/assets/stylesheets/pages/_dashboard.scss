@@ -1,10 +1,118 @@
-#profile-page-container h4 {
-  color: #fff;
+// Profile Main
+#profile-page-container {
+  width: 1000px;
+  margin: 0 auto;
 }
 
-.profile-image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
+.profile-info-main {
+  display: flex;
+  padding: 3rem 0rem;
+  border-bottom: 0.5px solid  rgba(255,255,255,0.1);
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .button-secondary-small {
+    margin: 0rem 0rem 0rem 0rem;
+  }
+  .user-online {
+    .online-badge {
+      background-color: #00C876;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: 5px 10px;
+      border-radius: 12px;
+      margin: 0;
+      font-size: 12px;
+    }
+    .offline-badge {
+      background-color: red;
+      color: #363636;
+      text-transform: uppercase;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      padding: 5px 10px;
+      border-radius: 12px;
+      margin: 0;
+      font-size: 12px;
+    }
+  }
+  .profile-links {
+    display: flex;
+    align-items: center;
+    .user-github {
+      margin-right: 2rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+  .profile-info-main-image {
+    margin-right: 2rem;
+  }
+  h1 {
+    font-family: 'Poppins', sans-serif;
+  }
 }
+
+.profile-info-main-content {
+  width: 100%;
+}
+
+.profile-headline {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+// Profile Content
+
+.profile-info-other {
+  padding: 3rem 0rem;
+  border-bottom: 0.5px solid  rgba(255,255,255,0.1);
+}
+
+.profile-info-wrapper {
+  display: flex;
+  .extra-space {
+    margin-bottom: 2rem;
+  }
+  .profile-info-type {
+    width: 100px;
+  }
+  .profile-info-type h4 {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-weight: 500;
+  }
+  h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5rem;
+  }
+  .bio-text {
+    width: 900px;
+  }
+}
+
+.user-tickets-container {
+  padding: 3rem 0;
+  .cards-tickets {
+    padding: 2rem 0;
+  }
+}
+
+.user-tickets-headline h4 {
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  font-weight: 500;
+}
+
+
