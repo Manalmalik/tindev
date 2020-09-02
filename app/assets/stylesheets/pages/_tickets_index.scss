@@ -3,27 +3,64 @@
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   padding: 60px 0px;
+  a:hover {
+    text-decoration: none !important;
+    text-transform: none;
+    border: 1px solid #fff;
+    border-radius: 12px;
+  }
 }
 
 .card-ticket {
+  display: flex;
+  flex-direction: column;
+  height: 270px;
   border: 1px solid #2e2e2e !important ;
   border-radius: 12px;
-  padding:  1rem;
+  padding:  1.7rem;
   color: #fff;
   font-family: 'Poppins' sans-serif;
   h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 24px;
+    font-size: 1.2rem;
     font-weight: 500;
   }
-  p {
+  .trix-content {
+    height: 75px;
+    margin-bottom: 30px;
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.6);
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .button-secondary-small {
     margin: 0;
+  }
+  .ticket-title {
+    margin: 0px;
+  }
+  .ticket-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    p {
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 300;
+    }
+  }
+  .ticket-creator {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    p {
+      margin: 0;
+      margin-left: 20px;
+    }
   }
 }
 
@@ -45,3 +82,9 @@
   height: 54px;
 }
 
+.profile-image {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
