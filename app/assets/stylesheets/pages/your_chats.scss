@@ -29,13 +29,17 @@
 .individual-chat-info {
   display: flex;
   flex-direction: column;
+
+  p{
+    margin-right: 5px;
+  }
 }
 
 .individual-chat-name {
   color: #fff;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  margin: 0px;
+  margin-top: 15px;
   padding: 0px;
 }
 
@@ -45,4 +49,10 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.user-online {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

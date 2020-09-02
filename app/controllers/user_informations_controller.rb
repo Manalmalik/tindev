@@ -1,23 +1,5 @@
 class UserInformationsController < ApplicationController
 
-  def new
-    @user_info = UserInformation.new
-    @user = User.find(params[:user_id])
-    authorize @user_info
-    authorize @user
-  end
-
-  def create
-    @user_info = UserInformation.new(info_params)
-    @user_info.user = current_user
-    authorize @user_info
-    if @user_info.save
-      redirect_to root_path
-    else
-      render :new
-    end
-  end
-
   def edit
     @user = User.find(params[:id])
     @user_info = @user.user_information
@@ -35,9 +17,17 @@ class UserInformationsController < ApplicationController
     end
   end
 
-  # def toggle_status
-
-  # end
+  def toggle_status
+    @user_status = current_user.user_information
+    authorize @user_status
+    if @user_status.online == true
+      @user_status.online = false
+    else
+      @user_status.online = true
+    end
+    @user_status.save
+    redirect_to '#'
+  end
 
   def show
     @user = User.find(params[:id])
