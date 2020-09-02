@@ -25,16 +25,17 @@
       <li>
         <p class="nav-link"> <%= link_to 'Set status', toggle_status_user_informations_path, class: 'availibity nav-link', remote: true  %> </p>
       </li>
-      <li class="nav-item dropdown">
-        <div class="avatar-status">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      <li class="nav-item dropdown avatar-status">
+          <% if current_user.user_information.photo.attached? %>
+               <%= cl_image_tag current_user.user_information.photo.key, class: 'avatar dropdown-toggle', id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% else %>
+              <%= image_tag 'https://res.cloudinary.com/dc0boljmu/image/upload/v1598961887/placeholder_opar57.jpg', class: 'avatar dropdown-toggle', id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% end %>
           <% if current_user.user_information.online == true %>
           <div class="status" style='background-color: green'></div>
           <% else %>
           <div class="status" style='background-color: #A82929'></div>
           <% end %>
-
-        </div>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <%= link_to "Add profile info", "#", class: "dropdown-item" %>
           <%= link_to "Edit password", edit_user_registration_path, class: "dropdown-item" %>
