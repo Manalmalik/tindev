@@ -1,9 +1,9 @@
 <div class="container-wrap">
-  <h1 class="hero-content form">Ask your question
-    <div class="subheadline-line form"></div></h1>
+    <div class="category-title" id="describe-issue">
+      <h1>Describe your issue</h1>
+    </div>
 
-    <div class="circle"></div>
-    <div class="ticket form">
+  <div>
      <%= simple_form_for [@category, @ticket] do |f| %>
 
      <div class="form-inputs">
@@ -14,8 +14,8 @@
        required: true %>
      </div>
 
-    <div class="form-actions button-main-small">
-      <%= f.button :submit, "Submit" %>
+    <div class="form-actions button-main-small" id="publish-button">
+      <%= f.button :submit, "Publish Issue" %>
     </div>
     <% end %>
   </div>

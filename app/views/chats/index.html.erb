@@ -24,7 +24,7 @@
         <p class="individual-chat-message"><%= chat.messages.last.content if chat.messages.exists? %></p>
       </div>
       <div class="see-chat-button">
-        <%= link_to "See Chat", category_ticket_chat_path(@tickets.find(chat.ticket_id).id, chat.ticket_id, chat.id), class: "button-secondary-small"  %>
+        <%= link_to "See Chat", category_ticket_chat_path(chat.ticket.category_id, chat.ticket_id, chat), class: "button-secondary-small"  %>
       </div>
     </div>
     <% end %>
