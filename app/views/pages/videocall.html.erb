@@ -1,6 +1,6 @@
 <div id="video-page-container">
   <p id="user-token"><%=  @token %></p>
-
+  <p class="name hide-name" id="name"><%= @user.username %></p>
   <div id="live-chat-container">
     <div class="video-container">
       <div id="local-media-container-id">
@@ -33,16 +33,18 @@
 
   </div>
 
-  <div class="video-buttons-container">
-    <div class="button-secondary-small" id="connect-button">
-      <p>click</p>
+  <div class="video-buttons-container" id="buttons">
+    <div class="button-secondary-small btn-padding" id="connect-button">
+      <p>Start Call</p>
     </div>
-    <div class="button-secondary-small" id="share-button">
-      <p>share</p>
+    <div class="button-secondary-small hide btn-padding" id="share-button">
+      <p>Share Screen</p>
     </div>
-    <div class="button-secondary-small" id="end-button">
-      <p>end</p>
+    <div class="button-secondary-small hide btn-padding" id="end-button">
+      <p>End Call</p>
     </div>
+      <span class="duration hide" id="timer"><span id="minutes"></span>:<span id="seconds"></span></span>
   </div>
+
 </div>
 

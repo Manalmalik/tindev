@@ -28,7 +28,6 @@ import "bootstrap";
 import "packs/twilio";
 import "packs/hover";
 
-
 // Internal imports, e.g:
 import { initChatCable } from '../channels/chat_channel.js';
 import { twilio } from './twilio.js';

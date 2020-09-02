@@ -9,6 +9,10 @@
   display: none;
 }
 
+.hide-name {
+  display: none;
+}
+
 #live-chat-container {
   display: flex;
   justify-conent: space-between;
@@ -18,11 +22,12 @@
 
 
 #local-media-container-id {
-  padding: 20px;
+  position: relative;
   max-height: 50%;
-  display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  width: 450px;
   video {
     width: 450px;
     margin: 0 auto;
@@ -88,4 +93,50 @@
 .video-buttons-container {
   width: 1200px;
   margin: 0 auto;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
+.btn-padding{
+  padding: 12px 16px 0px;
+}
+
+#rvideo{
+  width: 100% !important;
+}
+
+.duration {
+  color: white;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.name {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  margin: 0;
+  padding: 0.5em 0.5em 0.5em 2em;
+  background: rgba(242, 47, 70, 0.8);
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.name::after {
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 0;
+  right: -2em;
+  border: 1em solid rgba(242, 47, 70, 0.8);
+  border-right-color: transparent;
+  border-bottom-color: transparent;
 }
