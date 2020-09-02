@@ -6,6 +6,7 @@ const twilio = () => {
   const user_token = document.getElementById("user-token")
   const remoteDiv = document.getElementById('remote-media-div')
   const timer = document.getElementById('timer')
+  const username = document.getElementById('name')
 
   if (btn) {
   const token_1 = user_token.innerHTML
@@ -75,7 +76,8 @@ const twilio = () => {
           }
         });
 
-      const identity = participant.identity;
+      const identity = participant;
+      console.log(participant);
       participant.on('trackSubscribed', track => {
         // const div = document.createElement("div");
         // div.id = identity;
@@ -95,6 +97,8 @@ const twilio = () => {
               var localMediaContainer = document.getElementById('local-media-container-id');
               localTracks.forEach(function(track) {
               localMediaContainer.appendChild(track.attach());
+              username.classList.remove("hide-name");
+              localMediaContainer.append(username);
             });
         });
 
