@@ -28,7 +28,12 @@
       <li class="nav-item dropdown">
         <div class="avatar-status">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="status"></div>
+          <% if current_user.user_information.online == true %>
+          <div class="status" style='background-color: green'></div>
+          <% else %>
+          <div class="status" style='background-color: #A82929'></div>
+          <% end %>
+
         </div>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <%= link_to "Add profile info", "#", class: "dropdown-item" %>

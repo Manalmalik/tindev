@@ -2,19 +2,31 @@
   <h1>Your Messages</h1>
   <div class="chat-display-wrapper">
     <% @chats.reverse.each do |chat| %>
-      <div class="individual-chat">
-        <div class="individual-chat-info">
-          <% if current_user == chat.sender %>
-            <div class="individual-chat-name"><p><%= chat.receiver.username %></p></div>
-          <% elsif current_user == chat.receiver %>
-            <div class="individual-chat-name"><p><%= chat.sender.username %></p></div>
+    <div class="individual-chat">
+      <div class="individual-chat-info">
+        <% if current_user == chat.sender %>
+        <div class="user-online">
+        <div class="individual-chat-name"><p><%= chat.receiver.username %></p></div>
+          <% if chat.receiver.user_information.online == true %>
+          <div class="online" style='background-color: green'></div>
+          <% else %>
+          <div class="online" style='background-color: #A82929'></div>
           <% end %>
-          <p class="individual-chat-message"><%= chat.messages.last.content if chat.messages.exists? %></p>
-        </div>
-        <div class="see-chat-button">
-          <%= link_to "See Chat", category_ticket_chat_path(@tickets.find(chat.ticket_id).id, chat.ticket_id, chat.id), class: "button-secondary-small"  %>
-        </div>
+          </div>
+        <% elsif current_user == chat.receiver %>
+        <div class="individual-chat-name"><p><%= chat.sender.username %></p></div>
+        <% if chat.sender.user_information.online == true %>
+          <div class="online" style='background-color: green'></div>
+          <% else %>
+          <div class="online" style='background-color: #A82929'></div>
+          <% end %>
+        <% end %>
+        <p class="individual-chat-message"><%= chat.messages.last.content if chat.messages.exists? %></p>
       </div>
+      <div class="see-chat-button">
+        <%= link_to "See Chat", category_ticket_chat_path(@tickets.find(chat.ticket_id).id, chat.ticket_id, chat.id), class: "button-secondary-small"  %>
+      </div>
+    </div>
     <% end %>
   </div>
 </div>

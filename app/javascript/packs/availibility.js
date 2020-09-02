@@ -5,7 +5,7 @@ const availibility = () => {
   action.addEventListener('click', () => {
     const dot = document.querySelector('.status');
     if(dot.style.backgroundColor == 'green') {
-      dot.style.backgroundColor = '';
+      dot.style.backgroundColor = '#A82929';
     } else {
       dot.style.backgroundColor = 'green';
     }
