@@ -29,31 +29,34 @@
 
 <div class="container-wrap">
   <div class= 'ticket-info'>
-  <h1 class='ticket-title'><%= @ticket.title %></h1>
+    <h1 class='ticket-title'><%= @ticket.title %></h1>
+    <div>
+    <%= link_to "Contact User", category_ticket_chats_path(params[:category_id], params[:id], ticket_owner: @ticket.user), method: :post, class: 'button-main-small' %>
+    </div>
   </div>
-  <div class="ticket">
-   <div class="dot-online">
-     <% if @user.user_information.online == true %>
-    <div class="online" style='background-color: green'></div>
-    <% else %>
-     <div class="online" style='background-color: #A82929'></div>
-   <% end %>
- </div>
-   <p class='ticket-description'> <%= @ticket.description %> </p>
-   <div class="ticket-end">
-   <p class = "ticket-category"> <%= @category.name %> </p>
-   <p class='ticket-username'> Posted by <%= @user.username %> </p>
-
- </div>
- </div>
- <div class="contact">
-   <%= link_to "Contact User", category_ticket_chats_path(params[:category_id], params[:id], ticket_owner: @ticket.user), method: :post, class: 'button-main-small ticket-show' %>
-</div>
+  <div id="ticket-description">
+    <p><%= @ticket.description %></p>
+    <div class="line"></div>
+    <div class="ticket-end">
+      <p class = "ticket-category" id="category-show"> <%= @category.name %> </p>
+      <div class = "posted-dot">
+        <p class='ticket-username'> Posted by <%= @user.username %> </p>
+        <div class="dot-online">
+          <% if @user.user_information.online == true %>
+          <div class="online" style='background-color: green'></div>
+          <% else %>
+          <div class="online" style='background-color: #A82929'></div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="line"></div>
+  </div>
 <% if current_user.email == @ticket.user.email %>
-  <div class="buttons">
-    <%= link_to "Update Ticket", edit_category_ticket_path(@category, @ticket), class: "button-secondary-small ticket-show" %>
+  <div class="buttons ticket-buttons">
+    <%= link_to "Update Ticket", edit_category_ticket_path(@category, @ticket), class: "button-secondary-small", id: "update-button" %>
 
-    <%= link_to "Close Ticket", category_ticket_path(@category, @ticket), method: :delete, class: "button-secondary-small ticket-show" %>
+    <%= link_to "Close Ticket", category_ticket_path(@category, @ticket), method: :delete, class: "button-secondary-small", id: "close-button" %>
   </div>
 <% end %>
 </div>
