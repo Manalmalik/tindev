@@ -9,6 +9,7 @@
 
   <div class="cards-tickets">
     <% @tickets.reverse.each do |ticket| %>
+    <%= link_to category_ticket_path(@category.id, ticket.id) do %>
     <div class="card-ticket">
       <div class="ticket-header">
         <h2> <%= ticket.title %></h2>
@@ -23,10 +24,8 @@
         <% end %>
         <p> <%= ticket.user.username %> </p>
       </div>
-
-
-     <%= link_to 'Get more details', category_ticket_path(@category.id, ticket.id), class: "button-secondary-small" %>
     </div>
+    <% end %>
     <% end %>
   </div>
 
