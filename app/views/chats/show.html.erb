@@ -9,7 +9,7 @@
   <% end %>-->
   </div>
   <div>
-  <%= link_to "Start Video Call",  category_ticket_video_page_path(params[:category_id], params[:ticket_id]), class: "button-secondary-small" %>
+  <%= link_to "Start Video Call",  category_ticket_chat_video_path(params[:category_id], params[:ticket_id], @chat.id), class: "button-secondary-small" %>
   </div>
   </div>
 

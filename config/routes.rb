@@ -9,8 +9,8 @@ Rails.application.routes.draw do
       collection do
         get :filtered
       end
-      get '/video-page', to: 'pages#videocall'
       resources :chats, only: [:show, :create] do
+        get '/video', to: 'pages#videocall'
         resources :messages, only: [:create]
       end
     end

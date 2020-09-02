@@ -1,5 +1,6 @@
 #video-page-container {
   width: 1200px;
+  height:  90vh;
   margin: 0 auto;
   padding: 60px;
 }
@@ -12,6 +13,7 @@
   display: flex;
   justify-conent: space-between;
   align-items: center;
+  height: 100%;
 }
 
 
@@ -43,11 +45,44 @@
   width: 70%;
 }
 
+
+// Chat Styling
+
 .chat-container {
+  position: relative;
   width: 30%;
   height: 100%;
   padding: 20px;
-  background-color: pink;
+  border: 1px solid #2e2e2e !important ;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  h2 {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+  }
+  .message-header {
+    display: flex;
+    align-items: top;
+    margin-bottom: 0.5rem;
+    .profile-image-message {
+      width: 20px;
+      height: 20px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 20px;
+      margin-top: 5px;
+
+    }
+  }
+  .chat-input {
+    position: absolute;
+    bottom: 1rem;
+    width: 88%;
+  }
 }
 
 .video-buttons-container {
