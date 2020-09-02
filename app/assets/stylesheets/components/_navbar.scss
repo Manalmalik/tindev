@@ -44,4 +44,13 @@ p.nav-link {
   width: 35px;
 }
 
+.dropdown-menu {
+  background: #181818;
+}
 
+.dropdown-item {
+    color: white !important;
+    &:hover{
+      background: #131313;
+    }
+}

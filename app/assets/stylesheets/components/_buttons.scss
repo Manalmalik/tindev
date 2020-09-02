@@ -60,7 +60,7 @@
   font-size: 1rem;
   font-weight: 400;
   padding: 8px 16px;
-  margin: 0 10px;
+  margin: 0 5px;
   text-decoration: none;
   &:hover {
     background: rgba(249,56,56,1);
@@ -69,7 +69,9 @@
     color: #fff;
   }
 }
-
+.button-secondary-small.chat {
+  margin: 0 3px !important;
+}
 
 
 
