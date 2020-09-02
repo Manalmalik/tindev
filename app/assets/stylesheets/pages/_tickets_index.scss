@@ -28,6 +28,8 @@
 }
 
 .header {
+  display: flex;
+  align-items: center;
   margin-top: 60px;
   h1 {
     font-family: 'Poppins', sans-serif;

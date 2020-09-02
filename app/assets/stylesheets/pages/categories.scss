@@ -88,7 +88,7 @@ body {
 
 .circle-container {
   display: flex;
-  align-item: center;
+  align-items: center;
   padding: 0;
   margin: 0;
   h1{
@@ -100,18 +100,21 @@ body {
   }
 }
 
-.bigger-cirle {
-  border-radius: 50%;
-  height: 3.8rem;
-  width: 3.8rem;
-  border: 1.4rem solid #181818;
-}
-
 .tablinks {
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-weight: 500;
 }
+
+// ticket show view filtered 🤷‍♂️
+
+.bigger-cirle {
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  margin-right: 1rem;
+}
+
 
 
 

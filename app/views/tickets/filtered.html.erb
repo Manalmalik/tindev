@@ -4,7 +4,9 @@
     <div class="bigger-cirle"style='background-color: <%= @category.colour %>;'></div>
     <h1><%=@category.name %> </h1>
     </div>
-    <%= link_to 'Create a ticket', new_category_ticket_path(params[:category_id]), class: 'button-main create-a-ticket'  %>
+    <div class="button-wrapper">
+    <%= link_to 'Create a ticket', new_category_ticket_path(params[:category_id]), class: 'button-main-small'  %>
+    </div>
   </div>
 
   <div class="cards-tickets">
