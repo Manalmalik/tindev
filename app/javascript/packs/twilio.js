@@ -7,7 +7,9 @@ const twilio = () => {
   const remoteDiv = document.getElementById('remote-media-div')
   const timer = document.getElementById('timer')
   const username = document.getElementById('name')
+  const remoteUser = document.getElementById('remote-user')
 
+  console.log(remoteUser)
   if (btn) {
   const token_1 = user_token.innerHTML
   const { connect, LocalVideoTrack, createLocalTracks} = require('twilio-video');
@@ -62,6 +64,8 @@ const twilio = () => {
             const sharedVideo = rdiv.querySelector("#rvideo");
             console.log("sharedVideo");
             console.log(sharedVideo);
+            remoteUser.classList.remove("hide-name");
+            document.getElementById('remote-media-div').append(remoteUser);
           }
         });
       });

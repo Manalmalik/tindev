@@ -1,6 +1,7 @@
 <div id="video-page-container">
   <p id="user-token"><%=  @token %></p>
   <p class="name hide-name" id="name"><% @user.username %></p>
+  <p class="name hide-name" id="remote-user"><%= @chat.receiver.username%></p>
   <div id="live-chat-container">
     <div class="video-container">
       <div class="video-wrapper">
@@ -26,6 +27,7 @@
           </div>
 
         </div>
+
       </div>
 
     </div>

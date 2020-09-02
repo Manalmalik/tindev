@@ -27,7 +27,7 @@ class PagesController < ApplicationController
 
     # Grant access to Video
     grant = Twilio::JWT::AccessToken::VideoGrant.new
-    grant.room = 'cool room'
+    grant.room = @chat_id
     token.add_grant grant
 
     # Serialize the token as a JWT
