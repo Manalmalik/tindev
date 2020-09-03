@@ -68,6 +68,29 @@
     color: #fff;
   }
 }
+
+.button-secondary-big {
+  background: #181818;
+  transition: 1s;
+  border: 1px solid #2e2e2e;
+  border-radius: 60px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family: Poppins, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 12px 24px;
+  text-decoration: none;
+  &:hover {
+    background: rgba(249,56,56,1);
+    text-decoration: none !important;
+    border: 1px solid rgba(249,56,56,1);
+    color: #fff;
+  }
+}
+
+
 .button-secondary-small.chat {
   margin: 0 3px !important;
 }
