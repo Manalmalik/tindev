@@ -30,9 +30,11 @@
 <div class="container-wrap">
   <div class= 'ticket-info'>
     <h1 class='ticket-title'><%= @ticket.title %></h1>
-    <div>
-    <%= link_to "Contact User", category_ticket_chats_path(params[:category_id], params[:id], ticket_owner: @ticket.user), method: :post, class: 'button-main-small' %>
-    </div>
+    <% if current_user.email != @ticket.user.email %>
+      <div>
+      <%= link_to "Contact User", category_ticket_chats_path(params[:category_id], params[:id], ticket_owner: @ticket.user), method: :post, class: 'button-main-small' %>
+      </div>
+    <% end %>
   </div>
   <div id="ticket-description">
     <p><%= @ticket.description %></p>
