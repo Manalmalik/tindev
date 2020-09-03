@@ -1,19 +1,39 @@
 <div id="video-page-container">
   <p id="user-token"><%=  @token %></p>
-  <p class="name hide-name" id="name"><%= @user.username %></p>
+  <p class="name hide-name" id="name"><% @user.username %></p>
   <div id="live-chat-container">
     <div class="video-container">
-      <div id="local-media-container-id">
-      </div>
-      <div id="remote-media-div">
+      <div class="video-wrapper">
+        <div id="remote-media-div">
+        </div>
+        <div class="main-button-position">
+          <div class="button-main-video btn-padding" id="connect-button">
+            <p>Join Call</p>
+          </div>
+        </div>
+        <div class="video-button-wrapper">
+          <div id="local-media-container-id">
+          </div>
+          <div class="video-buttons-container" id="buttons">
 
+            <div class="button-secondary-small-video-share hide btn-padding" id="share-button">
+              <p>Share Screen</p>
+            </div>
+            <div class="button-secondary-small-video hide btn-padding" id="end-button">
+              <p>End Call</p>
+            </div>
+              <span class="duration hide" id="timer"><span id="minutes"></span>:<span id="seconds"></span></span>
+          </div>
+
+        </div>
       </div>
+
     </div>
     <div class="chat-container">
       <div class="conversation-title">
         <h2><%= @chat.ticket.title %></h2>
       </div>
-        <div id="messages" data-chat-id="<%= @chat.id %>">
+        <div id="messages" class="videocall-chat" data-chat-id="<%= @chat.id %>">
           <% @chat.messages.each do |message| %>
             <div class="message-header">
 
@@ -24,7 +44,7 @@
         <div class="chat-input">
           <%= simple_form_for @message, url: category_ticket_chat_messages_path(@chat.ticket.category, @chat.ticket, @chat), remote: true do |f| %>
             <%= f.input :content, label: false, placeholder: "Type a message..." %>
-            <div class= "button-secondary-small" id="message-form">
+            <div class= "button-secondary-small-chat" id="message-form">
               <%= f.button :submit %>
             </div>
           <% end %>
@@ -33,18 +53,7 @@
 
   </div>
 
-  <div class="video-buttons-container" id="buttons">
-    <div class="button-secondary-small btn-padding" id="connect-button">
-      <p>Start Call</p>
-    </div>
-    <div class="button-secondary-small hide btn-padding" id="share-button">
-      <p>Share Screen</p>
-    </div>
-    <div class="button-secondary-small hide btn-padding" id="end-button">
-      <p>End Call</p>
-    </div>
-      <span class="duration hide" id="timer"><span id="minutes"></span>:<span id="seconds"></span></span>
-  </div>
+
 
 </div>
 
