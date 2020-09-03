@@ -2,43 +2,56 @@
   <h1>Your Messages</h1>
   <div class="chat-display-wrapper">
     <% @chats.reverse.each do |chat| %>
-        <!-- <p class='title-of-ticket'> <%= chat.ticket.title %> </p> -->
+    <!-- <p class='title-of-ticket'> <%= chat.ticket.title %> </p> -->
     <div class="individual-chat">
       <div class="individual-chat-info">
+
         <% if current_user == chat.sender %>
+
         <div class="user-online">
           <% if chat.receiver.user_information.photo.attached? %>
-            <%= cl_image_tag chat.receiver.user_information.photo.key, class: 'profile-image-message-index' %>
+          <%= cl_image_tag chat.receiver.user_information.photo.key, class: 'profile-image-message-index' %>
           <% else %>
-            <%= image_tag 'https://res.cloudinary.com/dc0boljmu/image/upload/v1598961887/placeholder_opar57.jpg', class: 'profile-image-message-index' %>
+          <%= image_tag 'https://res.cloudinary.com/dc0boljmu/image/upload/v1598961887/placeholder_opar57.jpg', class: 'profile-image-message-index' %>
+
           <% end %>
+
           <div class="individual-chat-name"><p><%= chat.receiver.username %></p></div>
           <% if chat.receiver.user_information.online == true %>
           <div class="online" style='background-color: #299a0b'></div>
           <% else %>
           <div class="online" style='background-color: #ff3019'></div>
           <% end %>
-          </div>
+        </div>
+
         <% else current_user == chat.receiver %>
+
         <% if chat.sender.user_information.photo.attached? %>
-          <%= cl_image_tag chat.sender.user_information.photo.key, class: 'profile-image-message-index' %>
+        <%= cl_image_tag chat.sender.user_information.photo.key, class: 'profile-image-message-index' %>
         <% else %>
-            <%= image_tag 'https://res.cloudinary.com/dc0boljmu/image/upload/v1598961887/placeholder_opar57.jpg', class: 'profile-image-message-index' %>
-        <% end %>        <div class="individual-chat-name"><p><%= chat.sender.username %></p></div>
-        <% if chat.sender.user_information.online == true %>
-          <div class="online" style='background-color: #299a0b'></div>
-          <% else %>
-          <div class="online" style='background-color: #ff3019'></div>
-          <% end %>
+        <%= image_tag 'https://res.cloudinary.com/dc0boljmu/image/upload/v1598961887/placeholder_opar57.jpg', class: 'profile-image-message-index' %>
         <% end %>
+        <div class="individual-chat-name"><p><%= chat.sender.username %></p></div>
+        <% if chat.sender.user_information.online == true %>
+        <div class="online" style='background-color: #299a0b'></div>
+        <% else %>
+
+        <div class="online" style='background-color: #ff3019'></div>
+        <% end %>
+        <% end %>
+
         <p class="individual-chat-message"><%= chat.messages.last.content if chat.messages.exists? %></p>
       </div>
+
       <div class="see-chat-button">
         <%= link_to "See Chat", category_ticket_chat_path(chat.ticket.category_id, chat.ticket_id, chat), class: "button-secondary-small"  %>
-        <%= link_to "See Profile", user_path(current_user.id), class: "button-secondary-small chat"  %>
+        <% if current_user == chat.receiver %>
+        <%= link_to "See Profile", user_path(chat.sender.id), class: "button-secondary-small chat"  %>
+        <% else %>
+        <%= link_to "See Profile", user_path(chat.receiver.id), class: "button-secondary-small chat"  %>
+        <% end %>      </div>
       </div>
+      <% end %>
     </div>
-    <% end %>
   </div>
-</div>
 

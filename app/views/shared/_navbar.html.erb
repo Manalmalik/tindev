@@ -27,7 +27,11 @@
       </li>
 
       <li class="nav-item nav-link">
-         <%= link_to 'Online/Offline', toggle_status_user_informations_path, class: 'availibity', remote: true  %>
+        <% if current_user.user_information.online == true %>
+         <%= link_to 'Online', toggle_status_user_informations_path, class: 'availibity', style:'color: #299a0b ', remote: true  %>
+        <% else %>
+         <%= link_to 'Offline', toggle_status_user_informations_path, class: 'availibity', style:'color: #ff3019', remote: true  %>
+        <% end %>
       </li>
 
       <li class="nav-item dropdown avatar-status">
