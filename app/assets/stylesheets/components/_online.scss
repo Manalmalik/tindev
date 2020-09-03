@@ -11,4 +11,15 @@
   border-radius: 50%;
   width: 10px;
   height: 10px;
+  margin-bottom: 1px;
+  margin-left: 5px;
+
+}
+
+.user-dot {
+ display: flex;
+ align-items: center;
+ p{
+ color:rgba(255, 255, 255, 0.6);
+ }
 }

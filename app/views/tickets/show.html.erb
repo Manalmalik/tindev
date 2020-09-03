@@ -1,59 +1,65 @@
 <% if params[:display_question] == true %>
-  <!-- WIP: Button trigger modal -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Launch demo modal
-  </button>
+<!-- WIP: Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
 
-  <!-- WIP: Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
+<!-- WIP: Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
+</div>
 <% end %>
 
 
 <div class="container-wrap">
   <div class= 'ticket-info'>
-  <h1 class='ticket-title'><%= @ticket.title %></h1>
+    <h1 class='ticket-title'><%= @ticket.title %></h1>
   </div>
   <div class="ticket">
    <div class="dot-online">
      <% if @user.user_information.online == true %>
-    <div class="online" style='background-color: green'></div>
-    <% else %>
-     <div class="online" style='background-color: #A82929'></div>
-   <% end %>
- </div>
-   <p class='ticket-description'> <%= @ticket.description %> </p>
-   <div class="ticket-end">
+     <div class="user-dot">
+       <p>User is online</p>
+       <div class="online" style='background-color: #299a0b'> </div>
+     </div>
+     <% else %>
+     <div class="user-dot">
+      <p>User is offline</p>
+      <div class="online" style='background-color: #ff3019'></div>
+    </div>
+    <% end %>
+  </div>
+  <p class='ticket-description'> <%= @ticket.description %> </p>
+  <div class="ticket-end">
    <p class = "ticket-category"> <%= @category.name %> </p>
    <p class='ticket-username'> Posted by <%= @user.username %> </p>
 
  </div>
- </div>
- <div class="contact">
-   <%= link_to "Contact User", category_ticket_chats_path(params[:category_id], params[:id], ticket_owner: @ticket.user), method: :post, class: 'button-main-small ticket-show' %>
+</div>
+<div class="contact">
+ <%= link_to "Contact User", category_ticket_chats_path(params[:category_id], params[:id], ticket_owner: @ticket.user), method: :post, class: 'button-main-small ticket-show' %>
 </div>
 <% if current_user.email == @ticket.user.email %>
-  <div class="buttons">
-    <%= link_to "Update Ticket", edit_category_ticket_path(@category, @ticket), class: "button-secondary-small ticket-show" %>
+<div class="buttons">
+  <%= link_to "Update Ticket", edit_category_ticket_path(@category, @ticket), class: "button-secondary-small ticket-show" %>
 
-    <%= link_to "Close Ticket", category_ticket_path(@category, @ticket), method: :delete, class: "button-secondary-small ticket-show" %>
-  </div>
+  <%= link_to "Close Ticket", category_ticket_path(@category, @ticket), method: :delete, class: "button-secondary-small ticket-show" %>
+</div>
 <% end %>
 </div>
