@@ -6,14 +6,16 @@
       <div class="individual-chat-info">
         <% if current_user == chat.sender %>
         <div class="user-online">
-        <div class="individual-chat-name"><p><%= chat.receiver.username %></p></div>
+          <%= cl_image_tag chat.receiver.user_information.photo.key, class: 'profile-image-message-index' %>
+          <div class="individual-chat-name"><p><%= chat.receiver.username %></p></div>
           <% if chat.receiver.user_information.online == true %>
           <div class="online" style='background-color: #299a0b'></div>
           <% else %>
           <div class="online" style='background-color: #ff3019'></div>
           <% end %>
           </div>
-        <% elsif current_user == chat.receiver %>
+        <% else current_user == chat.receiver %>
+        <%= image_tag 'https://res.cloudinary.com/dc0boljmu/image/upload/v1598961887/placeholder_opar57.jpg', class: 'profile-image-message-index' %>
         <div class="individual-chat-name"><p><%= chat.sender.username %></p></div>
         <% if chat.sender.user_information.online == true %>
           <div class="online" style='background-color: #299a0b'></div>
