@@ -2,6 +2,7 @@
   <h1>Your Messages</h1>
   <div class="chat-display-wrapper">
     <% @chats.reverse.each do |chat| %>
+        <!-- <p class='title-of-ticket'> <%= chat.ticket.title %> </p> -->
     <div class="individual-chat">
       <div class="individual-chat-info">
         <% if current_user == chat.sender %>
