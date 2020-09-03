@@ -10,6 +10,8 @@ class PagesController < ApplicationController
   def videocall
     @chat = Chat.find(params[:chat_id])
     @message = Message.new
+    @ticket = Ticket.find(params[:ticket_id])
+    @category = Category.find(params[:category_id])
     authentication
   end
 
