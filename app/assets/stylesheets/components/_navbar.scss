@@ -4,13 +4,6 @@
   width: 1000px;
   margin: 0 auto;
   padding: 20px 0;
-  a.nav-link {
-    color: rgba(255, 255, 255, 0.4) !important;
-    margin: 0 10px;
-  }
-  a.nav-link:hover {
-    color: rgba(255, 255, 255, 1) !important;
-  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -20,9 +13,13 @@
 .navbar-lewagon .navbar-brand img {
   width: 80px;
 }
-p.nav-link {
-  color: rgba(255, 255, 255, 0.4) !important;
+.nav-link a {
+  color: rgba(255, 255, 255, 0.4);
   margin: 0 10px;
+  &:hover {
+    color: rgba(255, 255, 255, 1) !important;
+    text-decoration: none !important;
+  }
 }
 
 
@@ -40,8 +37,9 @@ p.nav-link {
 }
 
 .avatar {
-  height: 35px;
-  width: 35px;
+  height: 40px;
+  width: 40px;
+  margin-bottom: 10px;
 }
 
 .dropdown-menu {
@@ -49,8 +47,23 @@ p.nav-link {
 }
 
 .dropdown-item {
-    color: white !important;
-    &:hover{
-      background: #131313;
-    }
+  color: white !important;
+  &:hover{
+    background: #131313;
+  }
 }
+
+.navbar-nav {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.active {
+  color: #fff !important;
+  font-weight: 500;
+  .subheadline-line {
+    background-color: rgba(249,56,56,1);
+  }
+}
+
+
