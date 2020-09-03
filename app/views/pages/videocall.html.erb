@@ -1,7 +1,7 @@
 <div id="video-page-container">
   <p id="user-token"><%=  @token %></p>
   <p class="name hide-name" id="name"><% @user.username %></p>
-  <p class="name hide-name" id="remote-user"><%= @chat.receiver.username%></p>
+  <p class="name hide-name" id="remote-user"><% @chat.receiver.username%></p>
   <p class="hide-name" id="category" data-category="<%= @category.id %>"> </p>
   <p class="hide-name" id="ticket" data-ticket="<%= @ticket.id %>"> </p>
   <div id="live-chat-container">
