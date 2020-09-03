@@ -103,16 +103,18 @@
   }
   .message-header {
     display: flex;
-    align-items: top;
+    align-items: center;
     margin-bottom: 0.5rem;
     .profile-image-message {
       width: 20px;
       height: 20px;
       object-fit: cover;
       border-radius: 50%;
-      margin-right: 20px;
+      margin-right: 10px;
       margin-top: 5px;
-
+    }
+    .author {
+      margin-top: 5px;
     }
   }
   .chat-input {
@@ -252,7 +254,7 @@
   font-size: 20px;
   font-weight: 400;
   padding: 12px 24px;
-  width: 190px;
+  width: 100%;
   text-decoration: none;
   text-align: center;
   &:hover {
