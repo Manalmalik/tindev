@@ -6,5 +6,6 @@ class ChatChannel < ApplicationCable::Channel
 
   def unsubscribed
     # Any cleanup needed when channel is unsubscribed
+    # heelo from santi
   end
 end
