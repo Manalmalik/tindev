@@ -1,0 +1,5 @@
+meta_product_name: "Tindev"
+meta_title: "Tindev - Get video support from the developers community"
+meta_description: "Don't spend hours looking for answers online. Tindev allows you to get support from the developers community through a ticketing system."
+meta_image: "cover.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards

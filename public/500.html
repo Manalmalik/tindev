@@ -1,66 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>We're sorry, but something went wrong (500)</title>
+  <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-  .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-  .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #181818;
+    }
 
-  .rails-default-error-page div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 900;
+      font-size: 200px;
+      color: #131313;
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
 
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
+    h2 {
+      font-weight: 500;
+      color: rgba(255, 255, 255, 1);
+    }
 
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+    p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 200;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .content-fourhunid {
+      color: rgba(255, 255, 255, 0.8);
+      width: 40%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .button-main-small {
+      background: linear-gradient(90deg, rgba(249,56,56,1) 0%, rgba(255,172,49,1) 25%, rgba(255,219,32,1) 50%, rgba(255,172,49,1) 75%, rgba(249,56,56,1) 100%);
+      background-size: 400%;
+      border-radius: 60px;
+      display:inline-block;
+      cursor:pointer;
+      color:#ffffff;
+      font-family: Poppins, sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+
   </style>
 </head>
 
-<body class="rails-default-error-page">
+<body>
   <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <div>
-      <h1>We're sorry, but something went wrong.</h1>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
+  <div class="content-fourhunid">
+    <h1>500</h1>
+    <h2>Sorry, unxpected error</h2>
+    <p>We are working on fixing the problem. Be back soon.</p>
+    <a href="/" class="button-main-small">Back to website</a>
   </div>
 </body>
 </html>
