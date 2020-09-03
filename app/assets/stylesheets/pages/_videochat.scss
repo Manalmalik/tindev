@@ -21,6 +21,7 @@
 
 
 #local-media-container-id {
+  position:relative;
   max-height: 110px;
   justify-content: center;
   align-items: center;
@@ -51,6 +52,7 @@
 
 
 #remote-media-div {
+  position:relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,17 +146,17 @@
   padding-top: 10px;
 }
 
-// .name {
-//   position: absolute;
-//   top: 5px;
-//   left: 0;
-//   margin: 0;
-//   padding: 0.5em 0.5em 0.5em 2em;
-//   background: rgba(242, 47, 70, 0.8);
-//   color: #fff;
-//   font-size: 16px;
-//   line-height: 1;
-// }
+.name {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  margin: 0;
+  padding: 0.5em 0.5em 0.5em 2em;
+  background: rgba(242, 47, 70, 0.8);
+  color: #fff;
+  font-size: 10px;
+  line-height: 1;
+}
 
 .name::after {
   content: "";
