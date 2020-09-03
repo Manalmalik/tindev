@@ -61,22 +61,29 @@
 
     <div class="cards-tickets">
       <% @user.tickets.each do |ticket| %>
+      <%= link_to category_ticket_path(ticket.category, ticket) do %>
       <div class="card-ticket">
-        <h2> <%= ticket.title %></h2>
-        <%= link_to "See Ticket", category_ticket_path(ticket.category, ticket) %>
+        <div class="ticket-header">
+          <h2> <%= ticket.title %></h2>
+          <p> <%= ticket.created_at.strftime("%l:%M%p") %> </p>
+        </div>
+        <p> <%= ticket.description %> </p>
+        <div class="ticket-creator">
+          <% if ticket.user.user_information.photo.attached? %>
+             <%= cl_image_tag ticket.user.user_information.photo.key, class: 'profile-image' %>
+          <% else %>
+            <%= image_tag 'https://res.cloudinary.com/dc0boljmu/image/upload/v1598961887/placeholder_opar57.jpg', class: 'profile-image' %>
+          <% end %>
+          <p> <%= ticket.user.username %> </p>
+        </div>
       </div>
+      <% end %>
       <% end %>
     </div>
 
   </div>
 
 </div>
-
-
-
-
-
-
 
 
 
