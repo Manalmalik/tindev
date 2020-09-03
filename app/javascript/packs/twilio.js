@@ -9,7 +9,7 @@ const twilio = () => {
   const username = document.getElementById('name')
   const remoteUser = document.getElementById('remote-user')
 
-  //console.log(chatId)
+  console.log(remoteUser)
   if (btn) {
   const token_1 = user_token.innerHTML
   const { connect, LocalVideoTrack, createLocalTracks} = require('twilio-video');
@@ -35,12 +35,16 @@ const twilio = () => {
 
      // Connecting Participant
       room.on('participantConnected', participant => {
+      if(remoteUser.innerHTML != username.innerHTML) {
+      remoteUser.classList.remove("hide-name");
+      document.getElementById('remote-media-div').append(remoteUser);
+    }
       console.log(`Participant "${participant.identity}" connected`);
-
         participant.tracks.forEach(publication => {
           if (publication.isSubscribed) {
             const track = publication.track;
             document.getElementById('remote-media-div').appendChild(track.attach());
+          console.log("hide")
           }
         });
 
@@ -51,6 +55,7 @@ const twilio = () => {
 
       room.participants.forEach(participant => {
         const id = participant.identity.toString();
+
       participant.tracks.forEach(publication => {
          publication.on('unsubscribed', () => {
            /* Hide the associated <video> element and show an avatar image. */
@@ -61,13 +66,7 @@ const twilio = () => {
           if (video != null){
             video.remove();
             const rdiv = document.getElementById("remote-media-div");
-            console.log("rdiv");
-            console.log(rdiv);
             const sharedVideo = rdiv.querySelector("#rvideo");
-            console.log("sharedVideo");
-            console.log(sharedVideo);
-            remoteUser.classList.remove("hide-name");
-            document.getElementById('remote-media-div').append(remoteUser);
           }
         });
       });
@@ -92,6 +91,14 @@ const twilio = () => {
         remoteDiv.appendChild(track.attach());
         if(remoteDiv.lastChild.nodeName == "VIDEO"){
           remoteDiv.lastChild.id = "rvideo";
+        }
+        if(remoteUser.innerHTML != username.innerHTML) {
+            remoteUser.classList.remove("hide-name");
+            document.getElementById('remote-media-div').append(remoteUser);
+        }
+        else{
+          username.classList.remove("hide-name");
+          document.getElementById('remote-media-div').append(username);
         }
       });
     });

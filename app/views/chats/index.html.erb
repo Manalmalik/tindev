@@ -10,10 +10,10 @@
 
         <div class="user-online">
           <% if chat.receiver.user_information.photo.attached? %>
-          <%= cl_image_tag chat.receiver.user_information.photo.key, class: 'profile-image' %>
-
+          <%= cl_image_tag chat.receiver.user_information.photo.key, class: 'profile-image-message-index' %>
           <% else %>
-          <%= image_tag 'https://res.cloudinary.com/dc0boljmu/image/upload/v1598961887/placeholder_opar57.jpg', class: 'profile-image' %>
+          <%= image_tag 'https://res.cloudinary.com/dc0boljmu/image/upload/v1598961887/placeholder_opar57.jpg', class: 'profile-image-message-index' %>
+
           <% end %>
 
           <div class="individual-chat-name"><p><%= chat.receiver.username %></p></div>
@@ -27,10 +27,9 @@
         <% else current_user == chat.receiver %>
 
         <% if chat.sender.user_information.photo.attached? %>
-        <%= cl_image_tag chat.sender.user_information.photo.key, class: 'profile-image' %>
+        <%= cl_image_tag chat.sender.user_information.photo.key, class: 'profile-image-message-index' %>
         <% else %>
-
-        <%= image_tag 'https://res.cloudinary.com/dc0boljmu/image/upload/v1598961887/placeholder_opar57.jpg', class: 'profile-image' %>
+        <%= image_tag 'https://res.cloudinary.com/dc0boljmu/image/upload/v1598961887/placeholder_opar57.jpg', class: 'profile-image-message-index' %>
         <% end %>
         <div class="individual-chat-name"><p><%= chat.sender.username %></p></div>
         <% if chat.sender.user_information.online == true %>
