@@ -7,12 +7,16 @@ const twilio = () => {
   const remoteDiv = document.getElementById('remote-media-div')
   const timer = document.getElementById('timer')
   const username = document.getElementById('name')
+  const remoteUser = document.getElementById('remote-user')
 
+  //console.log(chatId)
   if (btn) {
   const token_1 = user_token.innerHTML
   const { connect, LocalVideoTrack, createLocalTracks} = require('twilio-video');
 
   btn.addEventListener('click', event => {
+  const categoryId = document.getElementById('category').dataset.category
+  const ticketId = document.getElementById('ticket').dataset.ticket
     event.preventDefault
     VideoCall()
       async function VideoCall(){
@@ -62,6 +66,8 @@ const twilio = () => {
             const sharedVideo = rdiv.querySelector("#rvideo");
             console.log("sharedVideo");
             console.log(sharedVideo);
+            remoteUser.classList.remove("hide-name");
+            document.getElementById('remote-media-div').append(remoteUser);
           }
         });
       });
@@ -125,7 +131,8 @@ const twilio = () => {
           });
 
           room.disconnect();
-          window.location.replace("/");
+          const url = "/categories/" + categoryId + "/tickets/" + ticketId
+          window.location.replace(url);
         });
       }
         // Start timer for call

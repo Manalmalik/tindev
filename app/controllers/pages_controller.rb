@@ -10,6 +10,8 @@ class PagesController < ApplicationController
   def videocall
     @chat = Chat.find(params[:chat_id])
     @message = Message.new
+    @ticket = Ticket.find(params[:ticket_id])
+    @category = Category.find(params[:category_id])
     authentication
   end
 
@@ -27,7 +29,7 @@ class PagesController < ApplicationController
 
     # Grant access to Video
     grant = Twilio::JWT::AccessToken::VideoGrant.new
-    grant.room = 'cool room'
+    grant.room = @chat_id
     token.add_grant grant
 
     # Serialize the token as a JWT
