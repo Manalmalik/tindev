@@ -131,7 +131,7 @@ const twilio = () => {
           });
 
           room.disconnect();
-          const url = "/categories/" + categoryId + "/tickets/" + ticketId
+          const url = "/categories/" + categoryId + "/tickets/" + ticketId + "?display_question=true"
           window.location.replace(url);
         });
       }

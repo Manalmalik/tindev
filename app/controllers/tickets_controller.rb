@@ -59,7 +59,7 @@ class TicketsController < ApplicationController
     authorize @ticket
     authorize @category
     @ticket.destroy
-    redirect_to category_tickets_path
+    redirect_to filtered_category_tickets_path
   end
 
   def filtered
