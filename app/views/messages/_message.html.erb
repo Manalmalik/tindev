@@ -5,6 +5,7 @@
   <% else %>
     <%= image_tag 'https://res.cloudinary.com/dc0boljmu/image/upload/v1598961887/placeholder_opar57.jpg', class: 'profile-image-message' %>
   <% end %>
+
   <i class="author">
     <span class="message-user-name"><%= message.user.username %></span>
     <small class="time-and-date"><%= message.created_at.strftime("%l:%M%p") %></small>
