@@ -6,6 +6,7 @@
 }
 
 .ticket-title {
+  width: 70%;
   margin-top: 40px;
   color: #fff;
   font-family: 'Poppins', sans-serif;
@@ -16,26 +17,72 @@
 
 .ticket-username {
   color: rgb(90,90,90);
+  margin-bottom: 0;
 }
 
+.ticket-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .buttons {
   margin-bottom: 2rem;
 }
 .button-main-small.ticket-show {
   font-size: 10px;
-  margin-left: 90%;
 }
 .ticket-end {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 .ticket-description {
   color: rgba(255,255,255, 0.8)
 }
 
+#ticket-description {
+  color: white;
+}
+
 .dot-online {
   display: flex;
   justify-content: flex-end;
+  margin-left: 8px;
 }
+
+.posted-dot {
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  width: 100%;
+  height: 0.5px;
+  background-color: rgba(255, 255,255, 0.1);
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+#category-show {
+  margin-bottom: 0;
+}
+
+.ticket-buttons {
+  margin-bottom: 120px;
+}
+
+#update-button #close-button {
+  margin-left: 0px !important;
+  margin-right: 32px !important;
+}
+
+
+
+
+
+
+
+

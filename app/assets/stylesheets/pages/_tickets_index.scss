@@ -3,6 +3,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   padding: 60px 0px;
+  a {
+    border: 1px solid #2e2e2e ;
+    border-radius: 12px;
+  }
   a:hover {
     text-decoration: none !important;
     text-transform: none;
@@ -15,8 +19,8 @@
   display: flex;
   flex-direction: column;
   height: 270px;
-  border: 1px solid #2e2e2e !important ;
-  border-radius: 12px;
+  // border: 1px solid #2e2e2e !important ;
+  // border-radius: 12px;
   padding:  1.7rem;
   color: #fff;
   font-family: 'Poppins' sans-serif;
