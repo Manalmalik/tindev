@@ -1,4 +1,4 @@
-.cards-tickets {
+  .cards-tickets {
   display: grid;
   grid-template-columns: 50% 50%;
   gap: 1rem;
@@ -26,6 +26,7 @@
   font-family: 'Poppins' sans-serif;
   h2 {
     font-family: 'Poppins', sans-serif;
+    width: 85%;
     font-size: 1.2rem;
     font-weight: 500;
   }

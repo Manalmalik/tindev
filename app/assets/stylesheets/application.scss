@@ -32,4 +32,8 @@
 .container-wrap {
   width: 1000px;
   margin: 0 auto;
+  min-height: 100vh;
+  h1 {
+    font-family: 'Poppins', sans-serif;
+  }
 }

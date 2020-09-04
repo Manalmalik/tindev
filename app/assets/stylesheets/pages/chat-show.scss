@@ -17,6 +17,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  .conversation-title {
+    width: 80%;
+  }
 }
 
 .message-user-name {
