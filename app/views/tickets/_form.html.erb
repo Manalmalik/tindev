@@ -1,4 +1,8 @@
-<div>
+
+<div class="container-wrap">
+  <br>
+  <h1>Edit Ticket</h1>
+  <br>
   <%= simple_form_for [@category, @ticket] do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -7,8 +11,11 @@
     <%= f.input :title %>
     <%= f.rich_text_area :description %>
   </div>
-  <span class="loginBtn btn-padding", id="primaryBtn">
-    <%= f.button :submit, id: 'submit-button', class:"links" %>
+  <span class="loginBtn", id="primaryBtn">
+    <%= f.button :submit, id:'submit-button', id: "update-button", class:"button-secondary-small" %>
+     <%= link_to 'Back', category_tickets_path, class:"button-secondary-small" %>
   </span>
   <% end %>
+
 </div>
+
