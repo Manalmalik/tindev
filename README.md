@@ -1,6 +1,7 @@
 Rails app created during Le Wagon bootcamp.
 
+Website to get support from the developer community via video chat
+
+Website deployed at tindev.support
 
 
-
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
